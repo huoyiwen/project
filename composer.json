@@ -1,21 +1,6 @@
 {
-    "name": "topthink/think",
-    "description": "the new thinkphp framework",
-    "type": "project",
-    "keywords": [
-        "framework",
-        "thinkphp",
-        "ORM"
-    ],
-    "homepage": "http://thinkphp.cn/",
-    "license": "Apache-2.0",
-    "authors": [
-        {
-            "name": "liu21st",
-            "email": "liu21st@gmail.com"
-        }
-    ],
     "require": {
+<<<<<<< HEAD
         "php": ">=5.4.0",
         "topthink/framework": "^5.0",
         "topthink/think-captcha": "^1.0",
@@ -26,5 +11,8 @@
     },
     "config": {
         "preferred-install": "dist"
+=======
+        "topthink/think-image": "^1.0"
+>>>>>>> 83c39b6f02516f62c6459ac7d91b00bedda68035
     }
 }
