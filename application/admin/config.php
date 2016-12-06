@@ -11,8 +11,8 @@
 
 return [
 
-    'web_site/' => 'http://www.tpa51.cn/admin/admin',
-    'web_static_site' => 'http://localhost/project/public/static/admin/',
+    'web_site/' => 'http://www.tpa51.cn/admin/',
+    'web_static_site' => 'http://www.tpa51.cn/static/admin/',
 
     // +----------------------------------------------------------------------
     // | 模板设置

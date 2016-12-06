@@ -1,0 +1,46 @@
+<!-- content start -->
+<div class="admin-content">
+    <div class="am-cf am-padding">
+        <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">景点管理</strong> / <small>Scenic Management</small></div>
+    </div>
+    <hr/>
+    <div class="am-g">
+        <div class="">
+            <form class="am-form">
+                <table class="am-table am-table-striped table-main">
+                    <thead>
+                        <tr>
+                            <th>景点ID</th>
+                            <th>景点名称</th>
+                            <th>所属地名</th>
+                            <th>景点介绍</th>
+                            <th>景点标图</th>
+                            <th>添加时间</th>
+                            <th>编辑选项</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {foreach $scene as $val}
+                        <tr>
+                            <td>{$val.sid}</td>
+                            <td>{$val.s_name}</td>
+                            <td>{$val.p_name}</td>
+                            <td>{$val.s_content}</td>
+                            <td><img src="{$val.s_pic}" alt=""></td>
+                            <td>{$val.s_createtime|date="Y-m-d H:i",###}</td>
+                            <td>删除</td>
+                        </tr>
+                        {/foreach}
+                    </tbody>
+                </table>
+                <hr/>
+                <p class="am-fl">共 15 条记录</p>
+                <ol class="am-pagination am-fr">
+                    <li>{$scene->render()}</li>
+                </ol>
+               
+            </form>
+        </div>
+    </div>
+</div>
+<!-- content end -->

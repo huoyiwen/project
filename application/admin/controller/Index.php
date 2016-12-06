@@ -1,7 +1,9 @@
 <?php
 namespace app\admin\controller;
 use think\Controller;
-class Admin extends Controller
+use think\Db;
+
+class Index extends Controller
 {
 	public function index()
 	{
@@ -12,10 +14,6 @@ class Admin extends Controller
 		return $this->fetch();
 	}
 	public function gallery()
-	{
-		return $this->fetch();
-	}
-	public function help()
 	{
 		return $this->fetch();
 	}
@@ -31,15 +29,11 @@ class Admin extends Controller
 	{
 		return $this->fetch();
 	}
-	public function user()
-	{
-		return $this->fetch();
-	}
+
 	public function admin404()
 	{
 		return $this->fetch();
 	}
 	
-
 	
 }

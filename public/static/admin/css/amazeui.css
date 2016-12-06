@@ -671,6 +671,9 @@ select {
   margin-left: -1rem;
   margin-right: -1rem;
   width: auto;
+  
+  min-height:650px;
+  height:auto;
 }
 .am-g .am-g.am-g-collapse {
   margin-left: 0;
