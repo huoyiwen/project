@@ -1,5 +1,6 @@
 [
     {
+<<<<<<< HEAD
         "name": "topthink/think-installer",
         "version": "v1.0.11",
         "version_normalized": "1.0.11.0",
@@ -135,6 +136,8 @@
         "description": "captcha package for thinkphp5"
     },
     {
+=======
+>>>>>>> e27c3163ad6386c82f75b7b655296a549f06422d
         "name": "topthink/think-image",
         "version": "v1.0.7",
         "version_normalized": "1.0.7.0",
@@ -145,7 +148,11 @@
         },
         "dist": {
             "type": "zip",
+<<<<<<< HEAD
             "url": "https://api.github.com/repos/top-think/think-image/zipball/8586cf47f117481c6d415b20f7dedf62e79d5512",
+=======
+            "url": "https://packagist.phpcomposer.com/files/top-think/think-image/8586cf47f117481c6d415b20f7dedf62e79d5512.zip",
+>>>>>>> e27c3163ad6386c82f75b7b655296a549f06422d
             "reference": "8586cf47f117481c6d415b20f7dedf62e79d5512",
             "shasum": ""
         },
