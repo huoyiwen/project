@@ -1,26 +1,99 @@
 <div id="bacimg" >
-    <div id="reg">
-        <form role="form">
+    <div id="regr">
+        <div role="form" >
             <div id="div1"></div>
             <div class="form-group">
-                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入用户名...">
+                <input type="text" name="username" class="form-control" id="exampleInputEmail1" placeholder="请输入用户名...">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入密码...">
+                <input type="password" name="password" class="form-control" id="exampleInputEmail1" placeholder="请输入密码...">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请确认密码...">
+                <input type="password" name="repassword" class="form-control" id="exampleInputEmail1" placeholder="请确认密码...">
             </div>
-            <button type="submit" class="btn btn-default">立即注册</button>
+            <div class="form-group">
+                <input type="text" name="viy" class="viy1 form-control" id="exampleInputEmail1" placeholder="请输入验证码...">
+                <a href="javascript:;"><img id="verify_img" src="{:captcha_src()}" onclick="rey()"/></a>
+                <div id="spanviy"></div>
+            </div>
+            <button type="submit" class="btn btn-default" id="btn">立即注册</button>
             <div class="reg1">注册视为同意<b>《蚂蜂窝用户使用协议》</b></div>
             <div class="reg1">用合作网站账户直接登录</div>
             <div class="reg2"><a href=""><img src="../../qq.png"></a></div>
             <div class="reg3">用QQ账号直接登录</div>
-        </form>
+        </div>
     </div>
-    <script type="text/javascript">
-        $('.btn').click(function () {
-
-        });
-    </script>
 </div>
+<script type="text/javascript"> 
+    function rey(){
+        var ts = Date.parse(new Date())/1000;
+        var img = document.getElementById('verify_img');
+        img.src = "/captcha?id="+ts;
+    }
+    var pwd = document.getElementsByTagName('input')[1];
+    var repwd = document.getElementsByTagName('input')[2];
+    var viy2 = document.getElementsByTagName('input')[3];
+    var isname = document.getElementsByTagName('input')[0];
+
+    isname.onblur = regi;
+    viy2.onblur = regi2;
+    isname.onfocus = pwd.onfocus = repwd.onfocus =  viy2.onfocus = regi1;
+    var timer = null;
+    function regi(){
+        var username = isname.value;
+        var password = pwd.value;
+        var repassword = repwd.value;
+        $.ajax({
+            type: "POST",
+            url: "http://www.tpa51.cn/index/auth/doregister1",
+            data: "username="+username+"&password="+password+"&repassword="+repassword,
+            success: function(msg){
+                $('#div1').html(msg);
+            }
+        });
+    }
+    function regi2(){
+        var password = pwd.value;
+        var repassword = repwd.value;
+        var viy = viy2.value;
+        $.ajax({
+            type: "POST",
+            url: "http://www.tpa51.cn/index/auth/doregister2",
+            data: "&password="+password+"&repassword="+repassword+"&viy="+viy,
+            success: function(msg){
+                $('#div1').html(msg);
+            }
+        });
+    }
+    function regi1()
+    {
+        $("#div1").html('');
+    }
+    $('#btn').click(function(){
+        //clearInterval(timer);
+        var username = isname.value;
+        var password = pwd.value;
+        var repassword = repwd.value;
+        var viy = viy2.value;
+        $.ajax({
+            type: "POST",
+            url: "http://www.tpa51.cn/index/auth/doregister1",
+            data: "username="+username+"&password="+password+"&repassword="+repassword+"&viy="+viy,
+            success: function(msg){
+                if (msg == '1'){
+                    var n = 5;
+                    timer = setInterval(function(){
+                        $('#spanviy').html('注册成功 '+n+'秒后跳到登录页面');
+                        if (n == 0){
+                            window.location.href = "http://www.tpa51.cn/index/auth/login";
+                        }
+                        n = n-1;
+                    },1100);
+
+                }else{
+                    $('#div1').html(msg);
+                }
+            }
+        });
+    });
+</script>

@@ -1,18 +1,59 @@
-<div class="container">
-<form role="form" method="post" action="{:url('Index/Auth/doLogin')}">
-  <div class="form-group">
-    <label for="exampleInputEmail1">邮箱地址</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="请输入邮箱">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">登录密码</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="请输入密码">
-  </div>
-  <div class="checkbox">
-    <label>
-      <input type="checkbox"> 记住我
-    </label>
-  </div>
-  <button type="submit" class="btn btn-default">立即登录</button>
-</form>
+<div id="bacimg1" >
+    <div id="reg">
+        <div role="form">
+            <div id="div1"></div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入用户名...">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="exampleInputEmail1" placeholder="请输入密码...">
+            </div>
+            <div class="form-group">
+                <input type="text" name="viy" class="viy1 form-control" id="exampleInputEmail1" placeholder="请输入验证码...">
+                <a href="javascript:;"><img id="verify_img" src="{:captcha_src()}" onclick="rey()"/></a>
+                <div id="spanviy1"></div>
+            </div>
+            <button type="submit" class="btn btn-default" id="btn">立即登录</button>
+            <div class="reg1">用合作网站账户直接登录</div>
+            <div class="reg2"><a href=""><img src="../../qq.png"></a></div>
+            <div class="reg3">用QQ账号直接登录</div>
+        </div>
+    </div>
 </div>
+<script type="text/javascript">
+    function rey(){
+        var ts = Date.parse(new Date())/1000;
+        var img = document.getElementById('verify_img');
+        img.src = "/captcha?id="+ts;
+    }
+
+    var pwd = document.getElementsByTagName('input')[1];
+    var viy2 = document.getElementsByTagName('input')[2];
+    var isname = document.getElementsByTagName('input')[0];
+    var btn = document.getElementById('btn');
+    btn.onclick = function(){
+        var username = isname.value;
+        var password = pwd.value;
+        var viy = viy2.value;
+        $.ajax({
+            type: "POST",
+            url: "http://www.tpa51.cn/index/auth/dologin",
+            data: "username="+username+"&password="+password+"&viy="+viy,
+            success: function(msg){
+                if (msg == '1'){
+                    var n = 3;
+                    timer = setInterval(function(){
+                        $('#div1').html('');
+                        $('#spanviy1').html('登录成功 '+n+'秒后跳到首页');
+                        if (n == 0){
+                            window.location.href = "http://www.tpa51.cn";
+                        }
+                        n = n-1;
+                    },1100);
+                }else{
+                    $('#div1').html(msg);
+                }
+            }
+        });
+    }
+</script>

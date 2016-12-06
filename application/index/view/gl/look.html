@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>蚂蜂窝旅游攻略路书下载,旅游攻略,自助游,自由行攻略指南 - 蚂蜂窝</title>
+    <meta name="description" content="蚂蜂窝免费提供世界各地精彩的旅游攻略路书下载,攻略下载后可一键打印随身携带.旅游攻略信息由真实的旅行用户志愿提供,蚂蜂窝旅游攻略,最佳的自助游,自由行攻略指南." />
+    <meta name="keywords" content="旅游攻略下载,自助游攻略,自由行攻略,路书,旅游指南" />
+
+    <script type="text/javascript">
+        window.Env = {"WWW_HOST":"www.mafengwo.cn","IMG_HOST":"images.mafengwo.net","P_HOST":"passport.mafengwo.cn","P_HTTP":"https:\/\/passport.mafengwo.cn","UID":0,"CSTK":"3510900ed8b66f02d6aa9a5232ad8740_04bb7742a50a2b5bdeccb127acb83cd5","GOOGLE_MAP_KEY":"AIzaSyD-Su0x_rPy1xehlMBcMyTqWkU49Bk53nQ"};
+    </script>
+
+    <link href="http://css.mafengwo.net/css/cv/css+base:css+jquery.suggest:css+plugins:css+plugins+jquery.jgrowl:css+other+popup:css+mfw-header.2015^YlVS^1480500257.css" rel="stylesheet" type="text/css"/>
+
+    <link href="http://css.mafengwo.net/css/gonglve/gonglve.css?1468219800" rel="stylesheet" type="text/css"/>
+
+
+    <script language="javascript" src="http://js.mafengwo.net/js/cv/js+jquery-1.8.1.min:js+global+json2:js+M+Module:js+M+M:js+M+Log:js+m.statistics^ZFw^1476350397.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+
+
+
+<div id="header" xmlns="http://www.w3.org/1999/html">
+    <div class="mfw-header">
+        <div class="header-wrap clearfix">
+            <div class="head-logo"><a href="http://www.tpa51.cn/"><img src="../../static/img/logo.jpg">qiotu.cn</a></div>
+            <ul class="head-nav" data-cs-t="headnav" id="_j_head_nav">
+                <li class="head-nav-index" data-cs-p="index"><a href="http://www.tpa51.cn/">首页</a></li>
+                <li class="head-nav-place" data-cs-p="mdd"><a href="http://www.tpa51.cn/index/mdd/place">目的地</a></li>
+                <li class="head-nav-gonglve" data-cs-p="gonglve"><a href="http://www.tpa51.cn/index/gl/look">旅游攻略</a></li>
+                <li class="head-nav-hotel" data-cs-p="hotel"><a href="http://www.tpa51.cn/index/hotl/hotel">酒店</a></li>
+                <li class="head-nav-community head-nav-dropdown _j_shequ_nav_show" id="_j_nav_community" data-cs-p="community">
+                    <div class="drop-toggle"><span>网站论坛</span></div>
+                </li>
+            </ul>
+            {if session('username')}
+            <div class="login-out">
+                <a id="_j_showlogin" href="http://www.tpa51.cn/ttt" rel="nofollow">个人中心</a><span class="split">|</span><a href="http://www.tpa51.cn/index/au" rel="nofollow">我的订单</a><span class="split">|</span><a href="http://www.tpa51.cn/index/auth/logout" rel="nofollow">我想去的</a><span class="split">|</span><a href="http://www.tpa51.cn/index/auth/logout" rel="nofollow">我的游记</a><span class="split">|</span><a href="http://www.tpa51.cn/index/auth/logout" rel="nofollow">退出</a>
+            </div>
+            {else}
+            <div class="login-out">
+                <a id="_j_showlogin" href="http://www.tpa51.cn/index/auth/login" rel="nofollow">登录</a><span class="split">|</span><a href="http://www.tpa51.cn/index/auth/register" rel="nofollow">注册</a>
+            </div>
+            {/if}
+        </div>
+    </div>
+    <script>
+        //判断是否显示 下拉bar
+        ;(function () {
+            window.showBarFlag = true;
+            var realPathName = location.pathname;
+            var regExp = /localdeals|sales|insurance|activity/gi;
+            var pathArr = realPathName.match(regExp);
+            if(window.Env.middleNavHide) { $('.dropdown-bar').hide();return;}
+            if(realPathName == '/sales/0-0-0-5-0-0-0-0.html' || window.Env.salesType ==5){
+                $('.ul-dropdown-bar > li:eq(4)').addClass('on');
+                window.showBarFlag = false;
+                $('.dropdown-bar').show();
+            }else if(realPathName == '/localdeals/0-0-0-21-0-0-0-0.html' || window.Env.salesType ==21){
+                $('.ul-dropdown-bar > li:eq(3)').addClass('on');
+                window.showBarFlag = false;
+                $('.dropdown-bar').show();
+            }else if(window.Env.sales_title_tag == 'visa' || window.Env.salesType == 4){
+                $('.ul-dropdown-bar > li:eq(2)').addClass('on');
+                window.showBarFlag = false;
+                $('.dropdown-bar').show();
+            } else if(window.Env.salesType) {
+                switch(window.Env.salesType|0) {
+                    case 1:
+                    case 3:
+                    case 6:
+                        $('.ul-dropdown-bar > li:eq(0)').addClass('on');
+                        break;
+                    case 2:
+                        $('.ul-dropdown-bar > li:eq(1)').addClass('on');
+                    default:
+                        $('.ul-dropdown-bar > li:eq(1)').addClass('on');
+                }
+                window.showBarFlag = false;
+                $('.dropdown-bar').show();
+            }
+            else {
+                if( pathArr){
+                    if(pathArr.length == 1 && pathArr[0] != 'activity'){
+                        switch(pathArr[0]){
+                            case 'localdeals':
+                                $('.ul-dropdown-bar > li:eq(1)').addClass('on');
+                                break;
+                            case 'insurance':
+                                $('.ul-dropdown-bar > li:eq(5)').addClass('on');
+                                break;
+                            case 'sales':
+                                $('.ul-dropdown-bar > li:eq(0)').addClass('on');
+                                break;
+                            default:
+                                break;
+                        }
+                        window.showBarFlag = false;
+                        $('.dropdown-bar').show();
+                    }else {
+                        if('activity'.indexOf(pathArr) != -1){
+                            window.showBarFlag  = true;
+                            $('.dropdown-bar').hide();
+                        }
+                    }
+                }
+            }
+            // 点击时触发
+            $('.ul-dropdown-bar > li').on('click',function () {
+                $(this).addClass('on').siblings().removeClass('on');
+            });
+        })();
+
+    </script>
+
+</div>
+
+
+
+
+<style type="text/css">
+    .domn_in p a:hover{
+        text-decoration: none;
+        color: #666;
+    }
+    .highlight {
+        color: #FFA801;
+    }
+    .input_like input {
+        line-height: normal;
+    }
+    ._j_page_loader{
+        background-color: #fff5e5;
+        border-radius: 4px;
+        color: #666;
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        width: 100%;
+    }
+    ._j_page_loader i{
+        background: rgba(0, 0, 0, 0) url("http://css.mafengwo.net/images/mfw-ask/mfwask-2016sprite_v3.png") no-repeat scroll 0 -592px;
+        display: inline-block;
+        height: 10px;
+        margin-left: 6px;
+        width: 10px;
+    }
+    ._j_page_loader:hover {
+        background-color: #efefef;
+        color: #666;
+        text-decoration: none;
+    }
+    .loader {
+        background-color: #efefef;
+        color: #666;
+        text-decoration: none;
+    }
+    ._j_page_loader:hover i {
+        background-position: 0 -621px;
+    }
+</style>
+<div class="wrapper">
+
+
+    <div class="gonglve_wrap clearfix">
+        <div class="cont-main _j_feed_list" data-ids='["10919","9176","10841","9179","9449","9626","11548","7406","3587","7979","7382","7679","3941","7061","10931","7880","11521","8840","11018","9968","11419","7394","7778","9173","11398","7415","7298","8507","11287","7151","11497","7988","3992","9539","9530","3191","9152","3929","3998","7982","4262","11482","7421","3953","7337","9515","4322","4238","11275","8609","9080","10010","3056","3905","7118","9071","3944","4289","10958","9131","9554","9965","7502","11203","9002","11107","11533","10703","2954","9050","3050","10964","3146","3926","11065","10796","7946","9569","11392","3101","10838","8618","10619","3950","7145","7961","4010","9125","7589","7358","3974","9062","11446","3014","10136","9161","10589","130","9944","3062","7490","7994","11272","7181","8546","4253","7874","2978","11344","7682","11371","7313","9134","3947","9452","7307","3650","10730","8279","9608","7553","3530","3989","3269","8744","8669","7091","10982","4001","11470","7349","7106","7403","10058","3245","9692","7379","11557","3023","9503","7229","3371","3959","7391","9167","9533","8048","3602","9200","10685","7559","7442","8633","11015","7991","9494","11434","3305","8642","4292","9089","7565","3590","8741","4274","11077","8042","3932","7070","11527","7139","9566","2933","9203","10595","10790","7592","7412","8855","7958","11542","7892","7376","3149","11122","3395","7067","7901","3440","7154","9116","7544","10598","194","3830","11251","7400","7895","3956","9218","11308","3524","3011","7532","4313","11563","9482","9182","9455","9629","7955","8678","7541","7085","9140","3938","3968","9488","3521","9098","7334","11485","9917","8120","8267","7865","3008","11056","7850","11461","8681","11560","7973","8672","10835","9053","11080","7967","7523","11566","3344","7940","7937","9479","9632","7130","9647","7574","7595","3833","9512","11341","8045","11572","4247","3542","7430","4223","4013","8543","7520","9188","9497","2831","3404","8639","11380","3032","9491","2981","11095","4232","11215","11335","8636","9065","8522","7811","7160","8066","3035","9440","3041","3053","7436","3980","7142","7409","8525","10061","11278","3446","11146","7370","4217","10127","8660","10490","4256","11347","3248","10637","4259","11428","8846","7616","7373","9110","8630","3971","7730","9011","10907","9464","4004","9920","10655","7166","9437","3278","9665","3488","4319","7538","11386","3077","10973","9542","11407","7367","7451","7121","7496","7718","7622","3209","7997","7187","4016","7517","4220","7331","4211","10040","3080","7328","11266","7847","9575","8555","2999","9215","3230","9950","8084","3518","7487","2957","11006","8843","7325","8837","7562","7598","11260","9461","3293","9212","7454","7505","4265","10886","3065","11383","7235","7571","7841","3128","3227","9155","7493","11539","9992","9197","9077","3620","3113","8537","7097","3428","9485","7808","7859","8675","3329","3911","7112","11509","3029","10604","7304","3257","7547","7823","3020","7385","7460","9689","7556","7295","3641","7757","3287","11506","9467","9158","7133","11545","7526","9128","7343","7535","9638","11059","10499","7388","3908","8072","3599","3038","11110","8666","10601","11302","10484","11185","8735","9476","9500","7499","9209","9104","11281","7457","3923","9170","10697","11284","11083","3068","3212","9908","7169","2960","3629","7163","3422","10571","7550","9035","11068","3221","9536","7079","9527","9443","11143","3044","11003","7739","9998","9605","110","210","8264","9185","3074","9146","3002","8831","11551","9923","9593","10052","9668","11395","11467","7322","11021","9221","3110","7931","10004","3323","8834","7934","9977","10823","10913","11356","4271","3965","7529","8027","7103","11209","10586","3071","11188","3899","8747","7619","9191","7100","9086","3095","7094","3284","10877","11053","4268","7124","7076","10073","9623","9017","3995","7088","3152","9020","4316","3983","9434","10715","9548","10694","4241","11191","3986","9935","9563","10754","8096","10751","4277","9557","8273","10895","4007","7397","3179","7511","7883","7433","10718","3425","9674","7340","10844","7184","10814","10664","11365","7082","3491","7760","3341","7568","11368","11464","3083","10709","10076","9473","8108","10580","9509","7418","7925","11389","7148","8282","11350","3398","9656","8558","11431","3047","7352","7073","9659","11503","8276","7910","7508","9677","11425","11500","7970","11314","11422","10961","10640","8093","10466","9032","10883","10673","3902","7829","11458","10574","9194","9560","11554","8621","8270","11377","10916","3608","10538","7886","9662","11027","11101","11413","11305","9671","9914","11224","10121","9590","11200","10070","7700","10493","10712","11440","7832","3977","11353","11359","11449","11242","10088"]' >
+            <div class="hd clearfix">
+                <h3>推荐攻略</h3>
+
+
+
+
+            </div>
+            <div class="gl-post">
+                <div data-cs-t="gonglve_feed" class="_j_feed_data" data-feed=[{"fid":"10919","type":"3"},{"fid":"9176","type":"2"},{"fid":"10841","type":"3"},{"fid":"9179","type":"2"},{"fid":"9449","type":"5"},{"fid":"9626","type":"5"},{"fid":"11548","type":"3"},{"fid":"7406","type":"2"},{"fid":"3587","type":"3"},{"fid":"7979","type":"4"}]>
+                    <div class="feed-item _j_feed_item" data-fid="10919" data-type="3" data-cs-p="位置_1">
+                        <a href="https://www.mafengwo.cn/localdeals/mdd_topic_666/?cid=1010616" target="_blank">
+                            <div class="bar clearfix">
+                                <span class="stat"><span class="num">296</span> 蜂蜂体验过<i class="icon-cart"></i></span>
+                                <span class="type"><i class="icon-sales"></i>来自 <strong>自由行攻略</strong></span>
+                            </div>
+                            <div class="title">
+                                漫步西安古城，梦回大唐，穿越长安！（附行程景点推荐及美食...
+                            </div>
+                            <div class="txt">
+                                <div class="info">每个到西安的人，或许都有着一种古都情结，大家在兵马俑中遥想秦帝国的所向披靡；在古老的城墙上感受昔日帝王脚下的万里江山；在大雁塔上仿佛还能看到玄奘法师的身影，聆听到低沉而又空灵的梵音；在陕博里穿越历史，回到100万年前；在回民街大快朵颐，忆长安，长安忆……不妨在这些古老印记中找寻长安旧梦，开启一段穿越...</div>
+
+
+
+
+
+                            </div>
+                            <div class="imgs">
+                                <ul class="clearfix">
+                                    <li><img src="http://b2-q.mafengwo.net/s9/M00/CD/DC/wKgBs1ga3-2AIMTuAAM03bJCFRE16.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
+                                    <li><img src="http://c1-q.mafengwo.net/s9/M00/CD/E8/wKgBs1ga3_-ARsnnAAJ6yrHG5hs57.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
+                                    <li><img src="http://n3-q.mafengwo.net/s9/M00/CD/FD/wKgBs1ga4COAMkkHAANWbzwrOG812.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
+                                    <li class="ext-r">26778浏览</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="hr"></div>
+                    <div class="feed-item _j_feed_item" data-fid="9176" data-type="2" data-cs-p="位置_2">
+                        <a href="http://www.mafengwo.cn/wenda/detail-7214676.html" target="_blank">
+                            <div class="bar clearfix">
+                                <span class="stat"><span class="num">968</span> 蜂蜂赞<i class="icon-hand"></i></span>
+                                <span class="type"><i class="icon-wenda"></i>来自 <strong>问答</strong></span>
+                            </div>
+                            <div class="title">
+                                哪些吃的特别有名，吃完觉得也就那么回事儿？
+                            </div>
+                            <dl class="art clearfix">
+                                <dt>
+                                    <img src="http://a1-q.mafengwo.net/s9/M00/C5/29/wKgBs1etPf2ABDtVAAGzH2o0khY78.jpeg?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F100">
+                                </dt>
+                                <dd>
+                                    <div class="info">
+                                        身边有几个朋友，极度的热爱泰国，一年要去好几次，每次都要带着肠胃药过去吃（因为总因为不卫生或者吃太多而不舒服），对泰国街边小吃极尽赞美。
+                                        我倒是不以为然，吃过很多泰国街边小吃，炸的蒸的，完全找不到什么是好吃的，有吗有吗？有什么好吃的，你来跟我说说。。。
+                                    </div>
+                                    <span class="art-tag">美食</span>
+                                    <div class="ext-r"><span class="nums">47865浏览，64回答</span></div>
+                                </dd>
+                            </dl>
+                        </a>
+                    </div>
+                    <div class="hr"></div>
+                    <div class="feed-item _j_feed_item" data-fid="10841" data-type="3" data-cs-p="位置_3">
+                        <a href="https://www.mafengwo.cn/localdeals/mdd_topic_636/?cid=1010616" target="_blank">
+                            <div class="bar clearfix">
+                                <span class="stat"><span class="num">1906</span> 蜂蜂体验过<i class="icon-cart"></i></span>
+                                <span class="type"><i class="icon-sales"></i>来自 <strong>自由行攻略</strong></span>
+                            </div>
+                            <div class="title">
+                                你知道吗？冬季去西藏更合适！
+                            </div>
+                            <div class="txt">
+                                <div class="info">相信很多蚂蜂窝的铁粉来西藏旅行前都看过了我之前写的《第一次来西藏怎么玩》攻略，里面分享了西藏旅行的经典十日玩法和注意事项，但是细心的小伙伴阅读后可能会发现，那篇攻略大部分说的是春夏秋三季，也是西藏旅行的旺季。今天我要说的是西藏旅行的淡季——冬季，其实冬季来西藏更合适！为什么这么说呢？请看正文！</div>
+
+
+
+
+
+                            </div>
+                            <div class="imgs">
+                                <ul class="clearfix">
+                                    <li><img src="http://n3-q.mafengwo.net/s9/M00/23/00/wKgBs1gZVV6AOIIWADZlM5Qp2D483.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
+                                    <li><img src="http://n1-q.mafengwo.net/s9/M00/3F/17/wKgBs1gZiBGAGandAAV6_8QfHaQ35.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
+                                    <li><img src="http://c3-q.mafengwo.net/s9/M00/3F/15/wKgBs1gZiBCAD14kACoPFeylYao96.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
+                                    <li class="ext-r">24985浏览</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="hr"></div>
+                    <div class="feed-item _j_feed_item" data-fid="9179" data-type="2" data-cs-p="位置_4">
+                        <a href="http://www.mafengwo.cn/wenda/detail-7214688.html" target="_blank">
+                            <div class="bar clearfix">
+                                <span class="stat"><span class="num">1789</span> 蜂蜂赞<i class="icon-hand"></i></span>
+                                <span class="type"><i class="icon-wenda"></i>来自 <strong>问答</strong></span>
+                            </div>
+                            <div class="title">
+                                旅行中路上你都常带哪些零食？
+                            </div>
+                            <dl class="art clearfix">
+                                <dt>
+                                    <img src="http://n2-q.mafengwo.net/s9/M00/C5/AF/wKgBs1etPrGAPVcdAAc3VnrNgG4702.png?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F100">
+                                </dt>
+                                <dd>
+                                    <div class="info">
+                                        蛋黄酥，这是被朋友推荐的一个零食，之后便无法自拔，有一段时间上班的下午茶全是它！购买记录为证ORZ有莲蓉蛋黄和豆沙蛋黄两种，其实我觉得吃起来差别不大，再说我的爱都在蛋黄上面！！每一颗的蛋黄都超大，外皮酥软，芝麻清香，配上咸咸的蛋黄和甜甜的豆沙，你一定会爱上的！
+                                    </div>
+                                    <span class="art-tag">美食</span>
+                                    <div class="ext-r"><span class="nums">75197浏览，172回答</span></div>
+                                </dd>
+                            </dl>
+                        </a>
+                    </div>
+                    <div class="hr"></div>
+                    <div class="feed-item _j_feed_item" data-fid="9449" data-type="5" data-cs-p="位置_5">
+                        <a href="http://www.mafengwo.cn/weixin/article-543.html" target="_blank">
+                            <div class="bar clearfix">
+                                <span class="stat"><span class="num">110</span> 蜂蜂喜欢<i class="icon-hand"></i></span>
+                                <span class="type"><i class="icon-notes"></i>来自 <strong>官方账号</strong></span>
+                            </div>
+                            <div class="title">
+                                扒一扒从宫廷流传到民间的北京美食
+                            </div>
+                            <div class="txt">
+                                <div class="info">常有人疑惑，北京乃六朝古都，为什么豆汁儿、炒肝儿、卤煮这类看似低廉的小吃颇为盛行呢？</div>
+
+
+
+
+
+                            </div>
+                            <div class="imgs">
+                                <ul class="clearfix">
+                                    <li><img src="http://c3-q.mafengwo.net/s9/M00/3E/4B/wKgBs1aQ6rGAOqz9AAUf8sDIwHQ25.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
+                                    <li><img src="http://a1-q.mafengwo.net/s6/M00/36/A7/wKgB4lJnd2qAY2vGAAIm1NWV12Y23.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
+                                    <li><img src="http://a4-q.mafengwo.net/s9/M00/3F/14/wKgBs1aQ7UmASBUiAAMV_L-05n461.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
+                                    <li class="ext-r">15446浏览</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="hr"></div>
+                    <div class="feed-item _j_feed_item" data-fid="9626" data-type="5" data-cs-p="位置_6">
+                        <a href="http://www.mafengwo.cn/weixin/article-609.html" target="_blank">
+                            <div class="bar clearfix">
+                                <span class="stat"><span class="num">188</span> 蜂蜂喜欢<i class="icon-hand"></i></span>
+                                <span class="type"><i class="icon-notes"></i>来自 <strong>官方账号</strong></span>
+                            </div>
+                            <div class="title">
+                                “十一”之后才是【九寨沟】最美的时候呐，你造么（附2016红...
+                            </div>
+                            <div class="txt">
+                                <div class="info">位于四川省阿坝的九寨沟因美丽的自然景观，被誉为“美丽的童话世界”，九寨沟的美景四季不断、各有特色，但其中又以秋季为一年中绝无仅有的最佳观赏时间。</div>
+
+
+
+
+
+                            </div>
+                            <div class="imgs">
+                                <ul class="clearfix">
+                                    <li><img src="http://n3-q.mafengwo.net/s6/M00/75/F2/wKgB4lJpKTuAMBf_AAnCa3d9UwA77.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
+                                    <li><img src="http://c1-q.mafengwo.net/s6/M00/71/B9/wKgB4lJpJiGAKHI1ABIiz5QCr8s43.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
+                                    <li><img src="http://b2-q.mafengwo.net/s9/M00/DC/94/wKgBs1e-r86AHNJ_AAoadw3a3-802.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
+                                    <li class="ext-r">27037浏览</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="hr"></div>
+                    <div class="feed-item _j_feed_item" data-fid="11548" data-type="3" data-cs-p="位置_7">
+                        <a href="https://www.mafengwo.cn/localdeals/mdd_topic_1028/?cid=1010616" target="_blank">
+                            <div class="bar clearfix">
+                                <span class="stat"><span class="num">32045</span> 蜂蜂体验过<i class="icon-cart"></i></span>
+                                <span class="type"><i class="icon-sales"></i>来自 <strong>自由行攻略</strong></span>
+                            </div>
+                            <div class="title">
+                                有生之年一定要去台湾跨年，2017台北跨年全攻略
+                            </div>
+                            <div class="txt">
+                                <div class="info">一年将尽，新年的新一天，从呆腻了的地方去一个新的环境迎接新的一年总是意义不凡，说到跨年去哪里，台湾是热门中的热门，而在台湾这么多个城市中，首推的就是台北~</div>
+
+
+
+
+
+                            </div>
+                            <div class="imgs">
+                                <ul class="clearfix">
+                                    <li><img src="http://c2-q.mafengwo.net/s6/M00/5A/ED/wKgB4lLKtZaAEUcLAAganCrN39g98.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
+                                    <li><img src="http://p3-q.mafengwo.net/s6/M00/74/DD/wKgB4lLQ6RyAMJGZAAaCL3mnEwI00.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
+                                    <li><img src="http://a4-q.mafengwo.net/s6/M00/5C/64/wKgB4lLKtxmAdZt3AAWNzdUWm2w55.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
+                                    <li class="ext-r">440浏览</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="hr"></div>
+                    <div class="feed-item _j_feed_item" data-fid="7406" data-type="2" data-cs-p="位置_8">
+                        <a href="http://www.mafengwo.cn/wenda/detail-6836134.html" target="_blank">
+                            <div class="bar clearfix">
+                                <span class="stat"><span class="num">1840</span> 蜂蜂赞<i class="icon-hand"></i></span>
+                                <span class="type"><i class="icon-wenda"></i>来自 <strong>问答</strong></span>
+                            </div>
+                            <div class="title">
+                                中国最美的火车线路是哪条呢？
+                            </div>
+                            <dl class="art clearfix">
+                                <dt>
+                                    <img src="http://c2-q.mafengwo.net/s9/M00/09/15/wKgBs1dyYQuAe6GXAAhJ3Z2KqAs256.png?imageMogr2%2Fthumbnail%2F%21220x150r%2Fgravity%2FCenter%2Fcrop%2F%21220x150%2Fquality%2F100">
+                                </dt>
+                                <dd>
+                                    <div class="info">
+                                        翻出了自己之前的盘点：
+                                        1.南北之旅：从最北到最南
+                                        ★列车：K1124 哈尔滨  -海口
+                                        线路：哈尔滨-吉林-辽宁-河北-天津-山东-河南-安徽-湖北-江西-广东-海口
+                                        距离：4420公里
+                                        时间：64小时07分
+                                        硬卧：837元
+
+
+                                        美丽冻人哈尔滨
+                                        去哈尔滨主要就一个字儿——吃。仨字儿——吃吃吃！好吃的快看看这篇帖子吧啊。
+
+                                        【...
+                                    </div>
+                                    <span class="art-tag">火车</span>
+                                    <span class="art-tag">行程</span>
+                                    <span class="art-tag">中国</span>
+                                    <span class="art-tag">交通</span>
+                                    <div class="ext-r"><span class="nums">553615浏览，91回答</span></div>
+                                </dd>
+                            </dl>
+                        </a>
+                    </div>
+                    <div class="hr"></div>
+                    <div class="feed-item _j_feed_item" data-fid="3587" data-type="3" data-cs-p="位置_9">
+                        <a href="http://www.mafengwo.cn/localdeals/mdd_topic_301/?cid=1010616" target="_blank">
+                            <div class="bar clearfix">
+                                <span class="stat"><span class="num">5329</span> 蜂蜂体验过<i class="icon-cart"></i></span>
+                                <span class="type"><i class="icon-sales"></i>来自 <strong>自由行攻略</strong></span>
+                            </div>
+                            <div class="title">
+                                玩遍这些才算来到迪拜！（必游景点+酒店指南+交通攻略+行程推...
+                            </div>
+                            <div class="txt">
+                                <div class="info">提起迪拜，脑海里闪过的就是直插云霄的未来感建筑+纸醉金迷的奢华酒店？其实这种世界级别的浮夸来自于迪拜的城市营销策略：敢为天下先，凡事只做第一不做第二。迪拜有着太多的No.1和吸引眼球的事物，以至于给我们的感觉很多时候都是WOW。既然花重金来到这壕地方旅游，自然要过足瘾玩个遍。用5天时间怎么玩透迪拜这座神奇...</div>
+
+
+
+
+
+                            </div>
+                            <div class="imgs">
+                                <ul class="clearfix">
+                                    <li><img src="http://b2-q.mafengwo.net/s9/M00/0C/4D/wKgBs1dOi7mAFPdQAATJK50A-xE682.png?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
+                                    <li><img src="http://c3-q.mafengwo.net/s9/M00/F2/9C/wKgBs1dOT_SAW5p3AAXo2NJtB5g95.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
+                                    <li><img src="http://b3-q.mafengwo.net/s9/M00/F2/C1/wKgBs1dOUEmAYvQKAAC6WqTM85858.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
+                                    <li class="ext-r">71463浏览</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="hr"></div>
+                    <div class="feed-item _j_feed_item" data-fid="7979" data-type="4" data-cs-p="位置_10">
+                        <a href="http://www.mafengwo.cn/weixin/article-270.html" target="_blank">
+                            <div class="bar clearfix">
+                                <span class="stat"><span class="num">219</span> 蜂蜂喜欢<i class="icon-hand"></i></span>
+                                <span class="type"><i class="icon-notes"></i>来自 <strong>官方账号</strong></span>
+                            </div>
+                            <div class="title">
+                                白墙青瓦梦大理——盘点最美白族民宿
+                            </div>
+                            <div class="txt">
+                                <div class="info">曾被习大大夸奖过的，最能记住乡愁的白族民居住起来会是怎样一种感觉呢？白墙青瓦、雕梁画栋，带你走进最古朴的大理生活。</div>
+
+
+
+
+
+                            </div>
+                            <div class="imgs">
+                                <ul class="clearfix">
+                                    <li><img src="http://n3-q.mafengwo.net/s9/M00/BD/A9/wKgBs1eIr52ATrTCAAF2LLKwxW479.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
+                                    <li><img src="http://n4-q.mafengwo.net/s9/M00/BD/D9/wKgBs1eIr-mADwIwAAMOC5bd-8Q72.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
+                                    <li><img src="http://c2-q.mafengwo.net/s9/M00/BD/F4/wKgBs1eIsAyAb7cuAAC56U0Rn4U98.jpeg?imageMogr2%2Fthumbnail%2F%21220x130r%2Fgravity%2FCenter%2Fcrop%2F%21220x130%2Fquality%2F100"></li>
+                                    <li class="ext-r">25218浏览</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="hr"></div>
+                    <a rel="nofollow" data-page="1" class="_j_page_loader" data-cs-p="加载更多_1"><span>加载更多</span><i></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="side-hd">旅游攻略导航</div>
+            <div class="nav-drop">
+                <div class="drop-item">
+                    <div class="trigger"><i></i>国内</div>
+                    <div class="drop-pop">
+                        <div class="inner">
+                            <ul>
+                                <li><a href="/gonglve/mdd-yn-0-0-1.html#list" target="_blank">云南(26)</a></li>
+                                <li><a href="/gonglve/mdd-sc-0-0-1.html#list" target="_blank">四川(25)</a></li>
+                                <li><a href="/gonglve/mdd-js-0-0-1.html#list" target="_blank">江苏(23)</a></li>
+                                <li><a href="/gonglve/mdd-zj-0-0-1.html#list" target="_blank">浙江(20)</a></li>
+                                <li><a href="/gonglve/mdd-bj-0-0-1.html#list" target="_blank">北京(19)</a></li>
+                                <li><a href="/gonglve/mdd-gd-0-0-1.html#list" target="_blank">广东(18)</a></li>
+                                <li><a href="/gonglve/mdd-heb-0-0-1.html#list" target="_blank">河北(16)</a></li>
+                                <li><a href="/gonglve/mdd-tw-0-0-1.html#list" target="_blank">台湾(16)</a></li>
+                                <li><a href="/gonglve/mdd-nm-0-0-1.html#list" target="_blank">内蒙古(13)</a></li>
+                                <li><a href="/gonglve/mdd-gz-0-0-1.html#list" target="_blank">贵州(12)</a></li>
+                                <li><a href="/gonglve/mdd-sd-0-0-1.html#list" target="_blank">山东(12)</a></li>
+                                <li><a href="/gonglve/mdd-xz-0-0-1.html#list" target="_blank">西藏(12)</a></li>
+                                <li><a href="/gonglve/mdd-gx-0-0-1.html#list" target="_blank">广西(11)</a></li>
+                                <li><a href="/gonglve/mdd-jx-0-0-1.html#list" target="_blank">江西(11)</a></li>
+                                <li><a href="/gonglve/mdd-qh-0-0-1.html#list" target="_blank">青海(11)</a></li>
+                                <li><a href="/gonglve/mdd-hn-0-0-1.html#list" target="_blank">河南(10)</a></li>
+                                <li><a href="/gonglve/mdd-ah-0-0-1.html#list" target="_blank">安徽(9)</a></li>
+                                <li><a href="/gonglve/mdd-fj-0-0-1.html#list" target="_blank">福建(9)</a></li>
+                                <li><a href="/gonglve/mdd-hainan-0-0-1.html#list" target="_blank">海南(9)</a></li>
+                                <li><a href="/gonglve/mdd-jl-0-0-1.html#list" target="_blank">吉林(9)</a></li>
+                                <li><a href="/gonglve/mdd-xj-0-0-1.html#list" target="_blank">新疆(9)</a></li>
+                                <li><a href="/gonglve/mdd-hlj-0-0-1.html#list" target="_blank">黑龙江(8)</a></li>
+                                <li><a href="/gonglve/mdd-s1x-0-0-1.html#list" target="_blank">山西(8)</a></li>
+                                <li><a href="/gonglve/mdd-s3x-0-0-1.html#list" target="_blank">陕西(8)</a></li>
+                                <li><a href="/gonglve/mdd-hub-0-0-1.html#list" target="_blank">湖北(7)</a></li>
+                                <li><a href="/gonglve/mdd-gs-0-0-1.html#list" target="_blank">甘肃(6)</a></li>
+                                <li><a href="/gonglve/mdd-hunan-0-0-1.html#list" target="_blank">湖南(6)</a></li>
+                                <li><a href="/gonglve/mdd-ln-0-0-1.html#list" target="_blank">辽宁(6)</a></li>
+                                <li><a href="/gonglve/mdd-sh-0-0-1.html#list" target="_blank">上海(3)</a></li>
+                                <li><a href="/gonglve/mdd-hk-0-0-1.html#list" target="_blank">香港(3)</a></li>
+                                <li><a href="/gonglve/mdd-cq-0-0-1.html#list" target="_blank">重庆(3)</a></li>
+                                <li><a href="/gonglve/mdd-mc-0-0-1.html#list" target="_blank">澳门(2)</a></li>
+                                <li><a href="/gonglve/mdd-nx-0-0-1.html#list" target="_blank">宁夏(2)</a></li>
+                                <li><a href="/gonglve/mdd-tj-0-0-1.html#list" target="_blank">天津(2)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="drop-item">
+                    <div class="trigger"><i></i>国外</div>
+                    <div class="drop-pop">
+                        <div class="inner">
+                            <ul>
+                                <li><a href="/gonglve/mdd-oz-0-0-1.html#list" target="_blank">欧洲(101)</a></li>
+                                <li><a href="/gonglve/mdd-dny-0-0-1.html#list" target="_blank">东南亚(67)</a></li>
+                                <li><a href="/gonglve/mdd-bmz-0-0-1.html#list" target="_blank">北美(35)</a></li>
+                                <li><a href="/gonglve/mdd-dy-0-0-1.html#list" target="_blank">东亚(25)</a></li>
+                                <li><a href="/gonglve/mdd-dyz-0-0-1.html#list" target="_blank">大洋洲(23)</a></li>
+                                <li><a href="/gonglve/mdd-ny-0-0-1.html#list" target="_blank">南亚(22)</a></li>
+                                <li><a href="/gonglve/mdd-fz-0-0-1.html#list" target="_blank">非洲(17)</a></li>
+                                <li><a href="/gonglve/mdd-xy-0-0-1.html#list" target="_blank">西亚(7)</a></li>
+                                <li><a href="/gonglve/mdd-nmz-0-0-1.html#list" target="_blank">南美(3)</a></li>
+                                <li><a href="/gonglve/mdd-njz-0-0-1.html#list" target="_blank">南极洲(1)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="drop-item">
+                    <div class="trigger"><i></i>主题</div>
+                    <div class="drop-pop">
+                        <div class="inner">
+                            <ul>
+                                <li><a href="/gonglve/zt-1049-0-0-0.html#list"  target="_blank">休闲(21)</a></li>
+                                <li><a href="/gonglve/zt-1037-0-0-0.html#list"  target="_blank">户外(17)</a></li>
+                                <li><a href="/gonglve/zt-1022-0-0-0.html#list"  target="_blank">文化(16)</a></li>
+                                <li><a href="/gonglve/zt-1051-1-0-0.html#list"  target="_blank">数据报告(15)</a></li>
+                                <li><a href="/gonglve/zt-1006-0-0-0.html#list"  target="_blank">美食(13)</a></li>
+                                <li><a href="/gonglve/zt-1027-0-0-0.html#list"  target="_blank">购物(12)</a></li>
+                                <li><a href="/gonglve/zt-1044-0-0-0.html#list"  target="_blank">节庆(10)</a></li>
+                                <li><a href="/gonglve/zt-1017-0-0-0.html#list"  target="_blank">自驾(9)</a></li>
+                                <li><a href="/gonglve/zt-1023-0-0-0.html#list"  target="_blank">必备(9)</a></li>
+                                <li><a href="/gonglve/zt-1026-0-0-0.html#list"  target="_blank">观赏(9)</a></li>
+                                <li><a href="/gonglve/zt-1046-0-0-0.html#list"  target="_blank">特别策划(9)</a></li>
+                                <li><a href="/gonglve/zt-1014-0-0-0.html#list"  target="_blank">周边(8)</a></li>
+                                <li><a href="/gonglve/zt-1016-0-0-0.html#list"  target="_blank">摄影(7)</a></li>
+                                <li><a href="/gonglve/zt-1050-0-0-0.html#list"  target="_blank">旅行主义(7)</a></li>
+                                <li><a href="/gonglve/zt-1047-0-0-0.html#list"  target="_blank">建筑(5)</a></li>
+                                <li><a href="/gonglve/zt-1033-0-0-0.html#list"  target="_blank">家庭(4)</a></li>
+                                <li><a href="/gonglve/zt-1045-0-0-0.html#list"  target="_blank">星旅行(3)</a></li>
+                                <li><a href="/gonglve/zt-1003-0-0-0.html#list"  target="_blank">滑雪(1)</a></li>
+                                <li><a href="/gonglve/zt-1028-0-0-0.html#list"  target="_blank">登山(1)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rank">
+                <ul>
+                    <li class="gl_list">
+                        <a href="/gonglve/mdd-10222.html" title="东京" target="_blank">
+                            <img src="http://n3-q.mafengwo.net/s9/M00/B6/57/wKgBs1eIpb6ADTVjAASOGaCd1oo33.jpeg?imageMogr2%2Fthumbnail%2F%21130x184r%2Fgravity%2FCenter%2Fcrop%2F%21130x184%2Fquality%2F90" alt="东京">
+                        </a>
+                        <p class="time">更新日期:2016-07-15</p>
+                        <div class="down_cout">
+                            <span></span>
+                            <p>1303880人下载</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="num">2</span>
+                        <a href="/gonglve/mdd-11047.html" title="普吉岛" target="_blank">普吉岛</a>
+                    </li>
+                    <li>
+                        <span class="num">3</span>
+                        <a href="/gonglve/mdd-10183.html" title="日本" target="_blank">日本</a>
+                    </li>
+                    <li>
+                        <span class="num">4</span>
+                        <a href="/gonglve/mdd-11042.html" title="京都" target="_blank">京都</a>
+                    </li>
+                    <li>
+                        <span class="num">5</span>
+                        <a href="/gonglve/mdd-10189.html" title="香港" target="_blank">香港</a>
+                    </li>
+                    <li>
+                        <span class="num">6</span>
+                        <a href="/gonglve/mdd-10083.html" title="泰国" target="_blank">泰国</a>
+                    </li>
+                    <li>
+                        <span class="num">7</span>
+                        <a href="/gonglve/mdd-10487.html" title="大理" target="_blank">大理</a>
+                    </li>
+                    <li>
+                        <span class="num">8</span>
+                        <a href="/gonglve/mdd-10035.html" title="成都" target="_blank">成都</a>
+                    </li>
+                    <li>
+                        <span class="num">9</span>
+                        <a href="/gonglve/mdd-10765.html" title="大阪" target="_blank">大阪</a>
+                    </li>
+                    <li>
+                        <span class="num">10</span>
+                        <a href="/gonglve/mdd-10132.html" title="厦门" target="_blank">厦门</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="clear"></div>
+
+    </div>
+</div>
+<script language="javascript" type="text/javascript">
+    $(function () {
+        //攻略分类
+        $('.drop-item').find('.trigger').click(function(){
+            $(this).closest('.drop-item').toggleClass('drop-open').siblings('.drop-item').removeClass('drop-open');
+        });
+        //ie placeholder 兼容
+        var doc=document,inputs=doc.getElementsByTagName('input'),supportPlaceholder='placeholder'in doc.createElement('input'),placeholder=function(input){
+            var text=input.getAttribute('placeholder'),defaultValue=input.defaultValue;
+            if(defaultValue==''){
+                input.value=text
+            }input.onfocus=function(){
+                if(input.value===text){
+                    this.value=''}
+            };
+            input.onblur=function(){
+                if(input.value===''){
+                    this.value=text
+                }
+            }
+        };
+
+        if(!supportPlaceholder){
+            for(var i=0,len=inputs.length;i<len;i++){
+                var input=inputs[i],text=input.getAttribute('placeholder');
+                if(input.type==='text'&&text){
+                    placeholder(input)
+                }
+            }
+        }
+
+
+        M.closure(function(require) {
+            //搜索suggest
+            var Suggestion = require('Suggestion')
+            var SuggestionHandle = new Suggestion({
+                'keyParamName': 'keyword',
+                'url': '/gonglve/ajax_book_search.php?act=search',
+                'input': $('#search_word'),
+                'listContainer': $('#search_result'),
+                'listFirstItemHover': true,
+                'listItemSelector' : '.sr-item',
+                'handleSuggest': function(res) {
+                    var html = '';
+                    if(res.ret==1 && res.msg && res.msg.length){
+                        var keyword = $('#search_word').val();
+                        this.listContainer.removeClass('no_gl').addClass('search_resu');
+                        html = '<ul data-cs-t="攻略搜索" data-cs-p="p">';
+                        for(var i in res.msg){
+                            var item = res.msg[i];
+                            item.value = item.value.replace(keyword,'<b class="highlight">'+keyword+'</b>');
+                            html += '<li><em><a href="/gonglve/'+item.type+'-'+item.id+'.html" style="color: #666" >'+item.value+'</a></em></li>'; //data-cs-l="/gonglve/'+item.type+'-'+item.id+'.html"
+                        }
+                        html += '<div class="clear"></div></ul>';
+
+                    } else {
+                        this.listContainer.addClass('no_gl').removeClass('search_resu');
+                        html = '<strong>此攻略还没有上线，敬请期待</strong>';
+                    }
+                    return html;
+                }
+            });
+
+            //banner滚动
+            var Slider = require('Slider');
+            var scrollTime = 500,
+                    stopTime = 3000,
+                    focus = false,
+                    topPicSlideCnt = $('#slide_box'),
+                    btnCnt = $('#thumb_box'),
+                    slideList = topPicSlideCnt.children('li'),
+                    listLength = slideList.length;
+
+            var topPicSlider = new Slider({
+                'slideCnt': topPicSlideCnt,
+                'slideList': slideList,
+                'slideTime': scrollTime,
+                'indexer': btnCnt.children('li')
+            });
+            topPicSlideCnt.add(btnCnt)
+                    .bind('mouseenter', function() { focus = true; })
+                    .bind('mouseleave', function() { focus = false; })
+                    .bind('mouseover', function() { focus = true; });
+
+            //自动播放
+            setInterval(function() {
+                if(!focus && M.windowFocused) {
+                    if(topPicSlider.index < listLength) {
+                        topPicSlider.toIndex(topPicSlider.index + 1);
+                    } else {
+                        topPicSlider.toIndex(1);
+                    }
+                }
+            }, stopTime);
+
+            //目的地菜单效果
+            require('jq-menuAim');
+            $('.gonglve-nav').menuAim({
+                rowSelector: ' .nav-item',
+                tolerance: 350,
+                activate: function(row) {
+                    $(row).addClass('hover');
+                },
+                deactivate: function(row) {
+                    $(row).removeClass('hover');
+                }
+            });
+
+            // add log && feed more
+            var $gHeight = $('#slide_box').height() + $('.gonglve_wrap').height() + 60 - 550,
+                    firstAdd = true,
+                    $glpost = $('.gl-post'),
+                    readFid = [],
+                    clickFid = [],
+                    feedArray = $('._j_feed_data').eq(0).data('feed'),
+                    wHeight = $(window).height(),
+                    ids = $('._j_feed_list').data('ids'),
+                    rendTime;
+
+            feedPosition();
+
+            $(window).scroll(function() {
+                // log
+                if(rendTime){
+                    clearInterval(rendTime);
+                }
+                var sTop = $(this).scrollTop();
+                rendTime = setTimeout(function(){
+                    getFidBySTop(sTop);
+                },100);
+
+                // more
+                if(firstAdd && sTop >= $gHeight){
+                    firstAdd = false;
+                    addMore(true);
+                }
+            });
+
+            // log
+            $('._j_feed_list').delegate('._j_feed_item','click',function(ev){
+                var fid = Number($(ev.currentTarget).data('fid')),
+                        type = $(ev.currentTarget).data('type');
+                if(fid){
+                    if($.inArray(fid,readFid) === -1){
+                        readFid.push(fid);
+                        commitNewReadFid(fid,type,0);
+                    }
+                    if($.inArray(fid,clickFid) === -1){
+                        clickFid.push(fid);
+                        commitNewReadFid(fid,type,1);
+                    }
+                }
+            });
+
+            // more
+            $glpost.delegate('._j_page_loader','click',function(){
+                addMore(false);
+            });
+
+            function addMore(first){
+                var $this=$('._j_page_loader');
+                if (!$this.data('loading')) {
+                    $this.addClass('loader');
+                    $this.data('loading', 1).text('加载中. . .');
+                    if(first){
+                        setTimeout(function(){
+                            ajaxMore($this);
+                        },500);
+                    }else{
+                        ajaxMore($this);
+                    }
+                }
+            }
+
+            function ajaxMore($this){
+                var page = $this.data('page');
+                $.post('/gonglve/', {
+                    'page': page,
+                    'ids':ids
+                }, function (ret) {
+                    $this.removeClass('loader');
+                    $this.remove();
+                    $glpost.append('<div class="_j_add_chat" style="position: absolute;visibility: hidden;z-index: -1;">'+ret+'</div>');
+                    var addFeedData = $('._j_feed_data').eq(page).data('feed');
+                    if(addFeedData)
+                        feedArray = feedArray.concat(addFeedData);
+                    if(feedPosition()){
+                        $('._j_add_chat').remove();
+                        $glpost.append(ret);
+                    }
+                });
+            }
+
+            function feedPosition(){
+                for(var i = 0; i < feedArray.length; i++){
+                    feedArray[i]['height'] = $('._j_feed_item').eq(i).height() + 20;
+                    feedArray[i]['top'] = $('._j_feed_item').eq(i).offset().top;
+                }
+                return true;
+            }
+
+            function getFidBySTop(sTop){
+                wHeight = $(window).height();
+                var fid,type;
+                for(var i = 0; i < feedArray.length; i++){
+                    var height = feedArray[i].height,
+                            top = feedArray[i].top;
+                    if((wHeight + sTop) > (height + top) &&  sTop < top){
+                        fid = Number(feedArray[i].fid);
+                        type = feedArray[i].type;
+                        if(fid && $.inArray(fid,readFid) === -1){
+                            readFid.push(fid);
+                            commitNewReadFid(fid,type,0);
+                        }
+                    }
+                }
+            }
+
+            function commitNewReadFid(fid,type,handleType){
+                mfwPageEvent('mdd','gonglve_feed_show',{
+                    'fid':fid,
+                    'type':type,
+                    'handle_type':handleType
+                });
+            }
+        });
+
+    });
+</script>
+<link href="http://css.mafengwo.net/css/mfw-footer.css?1478231953" rel="stylesheet" type="text/css"/>
+
+<div id="footer">
+    <div class="ft-content">
+
+        <div class="ft-copyright">
+            <div class="ft-safety">
+                <a class="s-a" target="_blank" href="https://search.szfw.org/cert/l/CX20140627008255008321" id="___szfw_logo___"></a>
+                <a class="s-b" href="https://ss.knet.cn/verifyseal.dll?sn=e130816110100420286o93000000&ct=df&a=1&pa=787189" target="_blank" rel="nofollow"></a>
+                <a class="s-c" href="http://www.itrust.org.cn/Home/Index/itrust_certifi/wm/1669928206.html" target="_blank" rel="nofollow"></a>
+            </div>
+            <a href="http://www.mafengwo.cn"><i class="ft-mfw-logo"></i></a>
+            <p>© 2016 Mafengwo.cn <a href="http://www.miibeian.gov.cn/" target="_blank" rel="nofollow">京ICP备11015476号</a>   京公网安备110105013401号   京ICP证110318号</p>
+            <p>新出网证(京)字242号 全国统一客服电话：<span class="highlight">4006-345-678</span><a target="_blank" href="http://www.mafengwo.cn/s/sitemap.html" class="highlight m_l_10">网站地图</a></p>
+        </div>
+    </div>
+</div>
+
+
+<link href="http://css.mafengwo.net/css/mfw-toolbar.css?1459131121" rel="stylesheet" type="text/css"/>
+
+<div class="mfw-toolbar" id="_j_mfwtoolbar">
+    <div class="toolbar-item-top">
+        <a role="button" class="btn _j_gotop">
+            <i class="icon_top"></i>
+            <em>返回顶部</em>
+        </a>
+    </div>
+    <div class="toolbar-item-feedback">
+        <a role="button" data-japp="feedback" class="btn">
+            <i class="icon_feedback"></i>
+            <em>意见反馈</em>
+        </a>
+    </div>
+    <div class="toolbar-item-code">
+        <a role="button" class="btn">
+            <i class="icon_code"></i>
+        </a>
+        <a role="button" class="mfw-code _j_code">
+
+
+            <img src="https://n3-q.mafengwo.net/s9/M00/01/7B/wKgBs1gjDcmAKFXuAAERZRJ4yus61.jpeg " width="300" height="192" >
+        </a>
+        <!--<div class="wx-official-pop"><img src="http://images.mafengwo.net/images/qrcode-weixin.gif"><i class="_j_closeqrcode"></i></div>-->
+    </div>
+    <div class="toolbar-item-down">
+        <a role="button" class="btn _j_gobottom">
+            <i class="icon_down"></i>
+            <em>页面底部</em>
+        </a>
+    </div>
+</div>
+
+
+
+<script language="javascript" type="text/javascript">
+    if (typeof M !== "undefined" && typeof M.loadResource === "function") {
+        M.loadResource("http://js.mafengwo.net/js/cv/js+Dropdown:js+jquery.tmpl:js+M+module+InputListener:js+M+module+SuggestionXHR:js+M+module+DropList:js+M+module+Suggestion:js+M+module+MesSearchEvent:js+SiteSearch:js+jquery.upnum:js+M+module+dialog+Layer:js+M+module+dialog+DialogBase:js+M+module+dialog+Dialog:js+M+module+TopTip:js+AHeader:js+M+module+Slider:js+jquery.menu-aim:js+M+module+Storage:js+jquery.jgrowl.min:js+AMessage:js+M+module+FrequencyVerifyControl:js+M+module+FrequencySystemVerify:js+ALogin:js+M+module+ScrollObserver:js+M+module+QRCode:js+AToolbar:js+ACnzzGaLog:js+ARecruit:js+ALazyLoad^ZlBU^1480589027.js");
+    }
+</script>
+
+</body>
+</html>

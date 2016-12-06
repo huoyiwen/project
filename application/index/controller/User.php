@@ -7,4 +7,9 @@ class User extends Auth
 	{
 		return $this->fetch();
 	}
+
+    public function outlogin()
+    {
+        session('');
+    }
 }

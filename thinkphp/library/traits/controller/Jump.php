@@ -34,7 +34,35 @@ trait Jump
      * @param array     $header 发送的Header信息
      * @return void
      */
-    protected function success($msg = '', $url = null, $data = '', $wait = 3, array $header = [])
+    protected function success($msg = '', $url = null, $data = '', $wait =5, array $header = [])
+    {
+        $code = 1;
+        if (is_numeric($msg)) {
+            $code = $msg;
+            $msg  = '';
+        }
+        if (is_null($url) && isset($_SERVER["HTTP_REFERER"])) {
+            $url = $_SERVER["HTTP_REFERER"];
+        } elseif ('' !== $url) {
+            $url = (strpos($url, '://') || 0 === strpos($url, '/')) ? $url : Url::build($url);
+        }
+        $result = [
+            'code' => $code,
+            'msg'  => $msg,
+            'data' => $data,
+            'url'  => $url,
+            'wait' => $wait,
+        ];
+
+        $type = $this->getResponseType();
+        if ('html' == strtolower($type)) {
+            $result = ViewTemplate::instance(Config::get('template'), Config::get('view_replace_str'))
+                ->fetch(Config::get('dispatch_success_tmpl'), $result);
+        }
+        $response = Response::create($result, $type)->header($header);
+        throw new HttpResponseException($response);
+    }
+    protected function success1($msg = '', $url = null, $data = '', $wait =3, array $header = [])
     {
         $code = 1;
         if (is_numeric($msg)) {
