@@ -16,4 +16,5 @@ class Index extends Controller
         $scene = Db::name('scene')->where('sid','<>',0)->limit(6)->order('s_createtime','desc')->select();
         $this->assign('scene',$scene);
         return $this->fetch();
+    }
 }
