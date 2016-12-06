@@ -5,12 +5,26 @@
     <title>跳转提示</title>
     <style type="text/css">
         *{margin:0;padding:0px;}
+<<<<<<< HEAD
         #bacimg{height: 669px;width: 1366px;background: url("../../static/img/30.jpg") no-repeat;}
         #bacimg #regr{background:#F5F5F5;width: 400px;height: 180px;position: absolute;  top:50%;left:50%;margin-left: -200px;margin-top: -90px;border-radius: 7px;opacity:0.8;}
         #bacimg #regr .success{color:#63A9B3;text-align:center;height:60px;line-height:60px;}
         #bacimg #regr .div1{color:#FFA800;text-align:center;font-size:13px;}
         #bacimg #regr p{color:#FFA800;text-align:center;font-size:15px;}
         #bacimg #regr p b{color:red;text-align:center;font-size:25px;}
+=======
+        #bacimg{height: 669px;width: 1366px;background: url("../../static/img/20.jpg") no-repeat;}
+        #bacimg #regr{background:#F5F5F5;width: 400px;height: 380px;position: absolute;  top:50%;left:50%;margin-left: -200px;margin-top: -150px;border-radius: 7px;}
+        #bacimg #regr .form-group{margin-top: 10px;}
+        #bacimg #regr .form-group #exampleInputEmail1{height: 30px;width: 260px;margin-left: 70px;}
+        #bacimg #regr button{height: 40px;width: 260px;margin-left: 70px;font-size: 16px;font-weight: bold;background: #FFA800;line-height: 30px;
+    color: #fff;}
+        #bacimg #regr .reg1{margin-left: 70px;font-size: 13px;margin-top: 15px;}
+        #bacimg #regr .reg2{margin-left: 180px;font-size: 13px;margin-top: 12px;border-radius:21px;}
+        #bacimg #regr .reg2 img{border-radius:21px;}
+        #bacimg #regr .reg3{margin-left: 140px;font-size: 13px;margin-top: 5px;}
+        #bacimg #regr #div1{height: 20px;font-size: 12px;color: red;margin-left: 140px;margin-top: 5px;}
+>>>>>>> e53c359dbc719b11ecfe44c1263bda5326f6d2af
     </style>
 </head>
 <body>
@@ -28,7 +42,11 @@
             <?php } ?>
             <p class="detail"></p>
             <p class="jump">
+<<<<<<< HEAD
                 页面自动 <a id="href" href="<?php echo($url);?>">跳转</a> 等待时间为： <b id="wait"><?php echo($wait);?></b>
+=======
+                页面自动 <a id="href" href="<?php echo($url);?>">跳转</a> 等待时间： <b id="wait"><?php echo($wait);?></b>
+>>>>>>> e53c359dbc719b11ecfe44c1263bda5326f6d2af
             </p>
         </div>
 

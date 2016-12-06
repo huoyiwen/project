@@ -1,6 +1,10 @@
 <div id="bacimg" >
     <div id="regr">
+<<<<<<< HEAD
         <div role="form" >
+=======
+        <form role="form" action="http://www.tpa51.cn/index/auth/doregister" method="post">
+>>>>>>> e53c359dbc719b11ecfe44c1263bda5326f6d2af
             <div id="div1"></div>
             <div class="form-group">
                 <input type="text" name="username" class="form-control" id="exampleInputEmail1" placeholder="请输入用户名...">
@@ -23,6 +27,7 @@
             <div class="reg3">用QQ账号直接登录</div>
         </div>
     </div>
+<<<<<<< HEAD
 </div>
 <script type="text/javascript"> 
     function rey(){
@@ -97,3 +102,28 @@
         });
     });
 </script>
+=======
+    <script type="text/javascript">
+        window.onload = function ()
+        {
+            var password = document.getElementsByTagName('input')[1];
+            var repassword = document.getElementsByTagName('input')[2];
+            var isname = document.getElementsByTagName('input')[0];
+            isname.onblur = repassword.onblur = regi;
+            function regi() {
+                var username = document.getElementsByTagName('input')[0].value;
+                var password = document.getElementsByTagName('input')[1].value;
+                var repassword = document.getElementsByTagName('input')[2].value;
+                $.ajax({
+                    type: "POST",
+                    url: "http://www.tpa51.cn/index/auth/doregister1",
+                    data: "username="+username+"&password="+password+"&repassword="+repassword,
+                    success: function(msg){
+                        $("#div1").html(msg);
+                    }
+                });
+            }
+        }
+    </script>
+</div>
+>>>>>>> e53c359dbc719b11ecfe44c1263bda5326f6d2af

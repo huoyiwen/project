@@ -1,6 +1,5 @@
 {
     "require": {
-<<<<<<< HEAD
         "php": ">=5.4.0",
         "topthink/framework": "^5.0",
         "topthink/think-captcha": "^1.0",
@@ -10,9 +9,7 @@
         "think-path": "thinkphp"
     },
     "config": {
-        "preferred-install": "dist"
-=======
+        "preferred-install": "dist",
         "topthink/think-image": "^1.0"
->>>>>>> 83c39b6f02516f62c6459ac7d91b00bedda68035
     }
 }

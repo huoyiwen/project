@@ -34,6 +34,7 @@ trait Jump
      * @param array     $header 发送的Header信息
      * @return void
      */
+<<<<<<< HEAD
     protected function success($msg = '', $url = null, $data = '', $wait =5, array $header = [])
     {
         $code = 1;
@@ -63,6 +64,9 @@ trait Jump
         throw new HttpResponseException($response);
     }
     protected function success1($msg = '', $url = null, $data = '', $wait =3, array $header = [])
+=======
+    protected function success($msg = '', $url = null, $data = '', $wait = 13, array $header = [])
+>>>>>>> e53c359dbc719b11ecfe44c1263bda5326f6d2af
     {
         $code = 1;
         if (is_numeric($msg)) {
