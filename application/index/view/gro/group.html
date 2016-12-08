@@ -21,26 +21,32 @@
     <link href="http://css.mafengwo.net/css/cv/css+group_common:css+group_create:css+group_manage:css+group_deindex^ZV0^1439888024.css" rel="stylesheet" type="text/css"/>
     <link href="http://css.mafengwo.net/css/group/group_n.css?1470882961" rel="stylesheet" type="text/css"/>
     <script language="javascript" src="http://js.mafengwo.net/js/jquery.simplePage.js?1439887642" type="text/javascript"></script>
+    <style>
+        .topBar .topBarC .tb{float: left;}
+        .topBar .topBarC .tb ul li{float: left;margin-left: 20px;line-height: 46px;font-size: 16px;font-family: "Adobe Caslon Pro Bold"}
+        .topBar .topBarC .log{float: right;line-height: 46px;font-size: 15px;}
+        .topBar .topBarC .log a{margin-left: 20px;font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", FontAwesome, sans-serif}
+        #hot_article_by_reply{display: none}
 
+    </style>
 </head>
 <body>
 
 <div class="topBar">
     <div class="topBarC">
-        <div class="logo"><a title="蚂蜂窝自由行" href="/">蚂蜂窝自由行</a></div>
-        <div class="t_nav">
-            <ul id="pnl_nav" data-cs-t="headnav_wo">
+        <div class="tb">
+            <ul>
                 <li data-cs-p="index">
-                    <strong class="t"><a href="/">首页</a></strong>
+                    <strong class="t"><a href="/">Qi☺Tu首页</a></strong>
                 </li>
                 <li data-cs-t="wenda" data-cs-p="wenda">
-                    <strong class="t"><a data-cs-p="from_wo_nav" href="/wenda/">问答</a></strong>
+                    <strong class="t"><a data-cs-p="from_wo_nav" href="/wenda/">大家都在看</a></strong>
                 </li>
                 <li data-cs-t="things" data-cs-p="things">
-                    <strong class="t"><a data-cs-p="from_wo_nav" href="/mall/things.php">蚂蜂窝周边</a></strong>
+                    <strong class="t"><a data-cs-p="from_wo_nav" href="/mall/things.php">屌丝专区</a></strong>
                 </li>
                 <li data-cs-p="together">
-                    <strong class="t"><a href="/together/">结伴</a></strong>
+                    <strong class="t"><a href="/together/">ZZ专区</a></strong>
                 </li>
                 <li data-cs-p="group">
                     <strong class="t"><a href="/group/">小组</a></strong>
@@ -48,45 +54,25 @@
                 <li data-cs-p="mall">
                     <strong class="t"><a href="/mall/">蜂蜜兑换</a></strong>
                 </li>
-                <li class="drop" data-cs-p="other">
-                    <strong class="t"><a href="/app/hun.php">更多<b></b></a></strong>
-                    <div class="c">
-                        <a href="/rent/" target="_blank">当地人</a>
-                        <a href="/focus/" target="_blank">真人兽</a>
-
-                        <a href="/school/" target="_blank">蚂蜂窝高校</a>
-                        <a href="/photo_pk/pk.php" target="_blank">照片PK</a>
-                        <a href="/auction/" target="_blank">蚂蜂窝拍卖行</a>
-                        <a href="/mall/virtual_goods.php" target="_blank">道具商店</a>
-                        <a href="/radio/" target="_blank">旅行电台</a>
-                        <a href="/club/" target="_blank">蜂首聚乐部</a>
-                        <a href="/home/vip_show.php" target="_blank">VIP</a>
-                        <a href="/game/wager.php" target="_blank">分歧终端机</a>
-                    </div>
-                </li>
             </ul>
         </div>
-        <div class="t_search">
-            <form method="GET" action="/group/s.php" name="search">
-                <input type="text" class="key" value="" name="q" id="word">
-                <input type="submit" value="" class="btn">
-            </form>
+        {if session('username')}
+        {if 1}
+        <div class="log">
+            <a style="text-decoration: none;color: red;">欢迎超级大帅哥&nbsp;&nbsp;<b style="font-size: 20px;">{:session('username')}</b></a><span class="split">|</span><a href="__SITE__/admin/" rel="nofollow">管理中心</a><span class="split">|</span><a href="__WEBSITE__/user/profile" rel="nofollow">我的资料</a><span class="split">|</span><a href="__WEBSITE__/auth/logout" rel="nofollow">退出管理账号</a>
         </div>
-
-        <div class="t_info">
-            <div class="no_login">
-                <span><a href="http://passport.mafengwo.cn">登录</a> / <a href="http://passport.mafengwo.cn/regist.html">注册</a></span>
-                <a class="login-qq" href="http://passport.mafengwo.cn/qq"></a>
-                <a class="login-weibo" href="http://passport.mafengwo.cn/weibo"></a>
-                <a class="login-renren" href="http://passport.mafengwo.cn/renren"></a>
-            </div>
+        {else}
+        <div class="log">
+            <a id="_j_showlogin" href="__SITE__/ttt" rel="nofollow">个人中心</a><span class="split">|</span><a href="__SITE__/index/au" rel="nofollow">我的订单</a><span class="split">|</span><a href="__WEBSITE__/auth/logout" rel="nofollow">我想去的</a><span class="split">|</span><a href="__WEBSITE__/auth/logout" rel="nofollow">我的游记</a><span class="split">|</span><a href="__WEBSITE__/auth/logout" rel="nofollow">退出</a>
         </div>
+        {/if}
+        {else}
+        <div class="log">
+            <a id="_j_showlogin" href="__WEBSITE__/auth/login" rel="nofollow">登录</a><span class="split">|</span><a href="__WEBSITE__/auth/register" rel="nofollow">注册</a>
+        </div>
+        {/if}
     </div>
 </div>
-
-
-
-
 <style type="text/css">
     .pagebar{ text-align: right; padding-top: 10px;}
     .pagebar .ti, .pagebar .this-page {
@@ -110,92 +96,6 @@
     }
 </style>
 <div class="wrapper">
-    <ul class="menu_wrap clearfix">
-        <li class="menu_item"><a target="_blank"  href="/group/my.php">我的小组</a></li>
-        <li class="menu_item"><a class="cur" target="_blank"  href="/group/">小组看板</a></li>
-        <li class="menu_item"><a target="_blank"  href="/group/my.php?type=3">线上活动</a></li>
-        <li class="menu_item"><a target="_blank"  href="/group/my.php?type=4">同城聚会</a></li>
-        <li class="menu_item"><a target="_blank"  class="city_change" href="/g/11428.html">北京分舵</a></li>
-        <li class="change_city" onmouseover="$('.drop_wrap').show();" onmouseout="$('.drop_wrap').hide();">
-            <a class="trigger" href="javascript:void(0);">切换城市<b></b></a>
-            <div class="drop_wrap hide">
-                <b><i></i></b>
-                <p>已开通同城小组的城市：</p>
-                <ul>
-                    <!-- 切换城市 -->
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11628.html" href="javascript:void(0);">成都</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11428.html" href="javascript:void(0);">北京</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11355.html" href="javascript:void(0);">昆明</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11565.html" href="javascript:void(0);">天津</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11629.html" href="javascript:void(0);">苏州</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11633.html" href="javascript:void(0);">广州</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11125.html" href="javascript:void(0);">丽江</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11634.html" href="javascript:void(0);">长沙</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11630.html" href="javascript:void(0);">武汉</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11631.html" href="javascript:void(0);">沈阳</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11637.html" href="javascript:void(0);">大连</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11636.html" href="javascript:void(0);">济南</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11638.html" href="javascript:void(0);">南京</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11635.html" href="javascript:void(0);">深圳</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/10994.html" href="javascript:void(0);">青岛</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11645.html" href="javascript:void(0);">福州</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11648.html" href="javascript:void(0);">重庆</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11651.html" href="javascript:void(0);">宁波</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11647.html" href="javascript:void(0);">台湾</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11194.html" href="javascript:void(0);">拉萨</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11642.html" href="javascript:void(0);">上海</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11657.html" href="javascript:void(0);">无锡</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11644.html" href="javascript:void(0);">银川</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11665.html" href="javascript:void(0);">海口</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11667.html" href="javascript:void(0);">杭州</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11666.html" href="javascript:void(0);">香港</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11691.html" href="javascript:void(0);">桂林</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11796.html" href="javascript:void(0);">内蒙</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11518.html" href="javascript:void(0);">山西</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11520.html" href="javascript:void(0);">安徽</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11507.html" href="javascript:void(0);">青海</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11544.html" href="javascript:void(0);">甘肃</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11204.html" href="javascript:void(0);">新疆</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11452.html" href="javascript:void(0);">河南</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11777.html" href="javascript:void(0);">哈尔滨</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11771.html" href="javascript:void(0);">扬州</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11801.html" href="javascript:void(0);">吉林</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11669.html" href="javascript:void(0);">江西</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11774.html" href="javascript:void(0);">泰国</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11944.html" href="javascript:void(0);">马尔代夫</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/12010.html" href="javascript:void(0);">南通</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11970.html" href="javascript:void(0);">韩国</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11643.html" href="javascript:void(0);">厦门</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11237.html" href="javascript:void(0);">贵州</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11646.html" href="javascript:void(0);">西安</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11106.html" href="javascript:void(0);">法国</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/12161.html" href="javascript:void(0);">新西兰</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/12242.html" href="javascript:void(0);">南宁</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11360.html" href="javascript:void(0);">越南</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11958.html" href="javascript:void(0);">东莞</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11747.html" href="javascript:void(0);">河北</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/12129.html" href="javascript:void(0);">新加坡</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/12352.html" href="javascript:void(0);">株洲</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/12477.html" href="javascript:void(0);">三亚</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/12277.html" href="javascript:void(0);">美国</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/12573.html" href="javascript:void(0);">泉州</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/12067.html" href="javascript:void(0);">缅甸</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/12581.html" href="javascript:void(0);">马来西亚</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/10152.html" href="javascript:void(0);">菲律宾</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/10228.html" href="javascript:void(0);">印度</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/11619.html" href="javascript:void(0);">烟台</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/12734.html" href="javascript:void(0);">盘锦</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/12731.html" href="javascript:void(0);">莆田</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/12252.html" href="javascript:void(0);">佛山</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/12718.html" href="javascript:void(0);">日照</a></li>
-                    <li><a class="city" id="http://www.mafengwo.cn/g/12636.html" href="javascript:void(0);">台州</a></li>
-
-                </ul>
-            </div>
-        </li>
-
-    </ul>
-
     <script type="text/javascript">
         function switchPanel(index){
             $('#panel_tab').children().removeClass("on").eq(index).addClass("on");
@@ -220,39 +120,6 @@
         }
     </script>
     <div class="col_main">
-        <!-- 推荐话题 -->
-        <ul class="rec_top clearfix">
-        </ul>
-        <div class="ig_wrap">
-            <div class="g_tab">
-                <ul class="clearfix" id="panel_tab">
-                    <li class="on" id="cls_show_0">
-                        <a class="avatar" href="javascript:void(0);" onclick="switchPanel(0)">我发布的话题<b><i></i></b></a>
-                    </li>
-                    <li id="cls_show_1"><a href="javascript:void(0);" onclick="switchPanel(1)">我参加的线上活动<b><i></i></b></a></li>
-                    <li id="cls_show_2"><a href="javascript:void(0);" onclick="switchPanel(2)">我参加的同城聚会<b><i></i></b></a></li>
-                    <li id="cls_show_3"><a href="javascript:void(0);" onclick="switchPanel(3)">我参与的话题<b><i></i></b></a></li>
-                    <li id="cls_show_4"><a href="javascript:void(0);" onclick="switchPanel(4)">我加入的小组<b><i></i></b></a></li>
-                </ul>
-            </div>
-            <div class="ig_bd">
-
-                <div class="gt" id="my_pb">
-                    <div class="ig_tips">
-                        <p class="msg"><b></b>你还没有发布任何话题</a></p>
-                    </div>
-                </div>
-
-                <div class="gt hide" id="my_xs"></div>
-
-                <div class="gt hide" id="my_jh"></div>
-
-                <div class="gt hide" id="my_gt" ></div>
-
-                <div class="m_group hide" id="my_gr"></div>
-            </div>
-        </div>
-
         <div class="hot_topic">
             <div class="g_tab">
                 <ul class="clearfix">
@@ -265,7 +132,7 @@
                     <table>
                         <tr>
                             <th class="topic_tit">话题</th>
-                            <th class="group_tit">小组</th>
+                            <th class="group_tit"></th>
                             <th class="author">作者</th>
                             <th class="">回复/阅读</th>
                             <th class="">最后回复</th>
@@ -273,321 +140,13 @@
                         </tr>
                         <tbody class="topic_new" id="new_article">
                         <!-- 最新发布 -->
-
-
-                        <tr>
-                            <td class="topic_tit">
-                                <img src="http://images.mafengwo.net/images/Z33.gif">
-                                <h3><a target="_blank"  href="/g/i/6335615.html" title="自驾福利｜＃点滴美好，时刻保护＃分享自驾Tips和美照，赢取新一代嘉实多磁护好礼！">自驾福利｜＃点滴美好，时刻保护... </a></h3>
-                            </td>
-                            <td class="group_tit">
-                                <strong><a target="_blank"  href="/g/10196.html" title="蜂窝广场">蜂窝广场</a></strong>
-                            </td>
-                            <td class="author">
-                                <a target="_blank"  href="/u/10024.html" title="蜂窝机器人">
-
-                                    <img src="http://images.mafengwo.net/images/pp16.gif">
-                                    <span>蜂窝机器人</span>
-                                </a>
-                            </td>
-                            <td class="view_num">
-                                <span>303/146074</span>
-                            </td>
-                            <td class="date_time"><span>12-06 17:42</span></td>
-                            <td class="reply">
-																                  <span class="avatar16">
-					<a target="_blank"  href="/u/10024.html" title="蜂窝机器人">
-                        <img src="http://c2-q.mafengwo.net/s9/M00/41/7A/wKgBs1Y4KeSAXHmoAAAaMq-e6us550.png?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                    </a>
-				  </span>
-                            </td>
-                        </tr>
-
-
-
-                        <tr>
-                            <td class="topic_tit">
-                                <img src="http://images.mafengwo.net/images/group/icon_bao.gif">
-                                <h3><a target="_blank"  href="/g/i/2947926.html" title="蚂蜂窝【问答指路人】招募强档开启！！！">蚂蜂窝【问答指路人】招募强档开... </a></h3>
-                            </td>
-                            <td class="group_tit">
-                                <strong><a target="_blank"  href="/g/13356.html" title="MFW问答">MFW问答</a></strong>
-                            </td>
-                            <td class="author">
-                                <a target="_blank"  href="/u/114259.html" title="蜂窝机器人2号">
-
-                                    <img src="http://images.mafengwo.net/images/pp16.gif">
-                                    <span>蜂窝机器...</span>
-                                </a>
-                            </td>
-                            <td class="view_num">
-                                <span>395/430099</span>
-                            </td>
-                            <td class="date_time"><span>12-06 17:31</span></td>
-                            <td class="reply">
-																                  <span class="avatar16">
-					<a target="_blank"  href="/u/74639472.html" title="沙巴莫莫">
-                        <img src="http://n2-q.mafengwo.net/s9/M00/B9/6C/wKgBs1azCymAIhWHAAVyBIBcKbc22.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                    </a>
-				  </span>
-                            </td>
-                        </tr>
-
-
-
-                        <tr>
-                            <td class="topic_tit">
-                                <img src="http://images.mafengwo.net/images/group/icon_ht.gif">
-                                <h3><a target="_blank"  href="/g/i/6368045.html" title="深冬避寒领略彩云之南">深冬避寒领略彩云之南 </a></h3>
-                            </td>
-                            <td class="group_tit">
-                                <strong><a target="_blank"  href="/g/10342.html" title="结伴同行">结伴同行</a></strong>
-                            </td>
-                            <td class="author">
-                                <a target="_blank"  href="/u/33209997.html" title="过好当下">
-
-                                    <img src="http://images.mafengwo.net/images/pp16.gif">
-                                    <span>过好当下</span>
-                                </a>
-                            </td>
-                            <td class="view_num">
-                                <span>1/29</span>
-                            </td>
-                            <td class="date_time"><span>12-06 17:27</span></td>
-                            <td class="reply">
-																                  <span class="avatar16">
-					<a target="_blank"  href="/u/33209997.html" title="过好当下">
-                        <img src="http://c2-q.mafengwo.net/s8/M00/9E/11/wKgBpVXkToKAJqgsAAKeCDvKxs826.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                    </a>
-				  </span>
-                            </td>
-                        </tr>
-
-
-
-                        <tr>
-                            <td class="topic_tit">
-                                <img src="http://images.mafengwo.net/images/group/icon_ht.gif">
-                                <h3><a target="_blank"  href="/g/i/5731481.html" title="明信片功能什么时候能恢复啊？">明信片功能什么时候能恢复啊？ </a></h3>
-                            </td>
-                            <td class="group_tit">
-                                <strong><a target="_blank"  href="/g/11752.html" title="蚂蜂窝邮局">蚂蜂窝邮局</a></strong>
-                            </td>
-                            <td class="author">
-                                <a target="_blank"  href="/u/31926150.html" title="摩羯双木">
-
-                                    <img src="http://images.mafengwo.net/images/pp16.gif">
-                                    <span>摩羯双木</span>
-                                </a>
-                            </td>
-                            <td class="view_num">
-                                <span>10/61</span>
-                            </td>
-                            <td class="date_time"><span>12-06 17:24</span></td>
-                            <td class="reply">
-																                  <span class="avatar16">
-					<a target="_blank"  href="/u/79788219.html" title="小白酱">
-                        <img src="http://b1-q.mafengwo.net/s8/M00/68/7D/wKgBpVWvbO2AYtkiAACF783I5UA26.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                    </a>
-				  </span>
-                            </td>
-                        </tr>
-
-
-
-                        <tr>
-                            <td class="topic_tit">
-                                <img src="http://images.mafengwo.net/images/group/icon_new.gif">
-                                <h3><a target="_blank"  href="/g/i/6379115.html" title="一个人的旅行是什么样的？">一个人的旅行是什么样的？ </a></h3>
-                            </td>
-                            <td class="group_tit">
-                                <strong><a target="_blank"  href="/g/11232.html" title="一个人旅行">一个人旅行</a></strong>
-                            </td>
-                            <td class="author">
-                                <a target="_blank"  href="/u/82774539.html" title="地球">
-
-                                    <img src="http://images.mafengwo.net/images/pp16.gif">
-                                    <span>地球</span>
-                                </a>
-                            </td>
-                            <td class="view_num">
-                                <span>0/5</span>
-                            </td>
-                            <td class="date_time"><span>12-06 17:20</span></td>
-                            <td class="reply">
-																                  <span class="avatar16">
-					<a target="_blank"  href="/u/82774539.html" title="地球">
-                        <img src="http://n2-q.mafengwo.net/s9/M00/3A/17/wKgBs1fzJYSAOpnRAAEZCo2BJyU82.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                    </a>
-				  </span>
-                            </td>
-                        </tr>
-
-
-
-                        <tr>
-                            <td class="topic_tit">
-                                <img src="http://images.mafengwo.net/images/Z33.gif">
-                                <h3><a target="_blank"  href="/g/i/3004699.html" title="亲身体验大阪周游卡（一日卡）经验篇">亲身体验大阪周游卡（一日卡）经验篇 </a></h3>
-                            </td>
-                            <td class="group_tit">
-                                <strong><a target="_blank"  href="/g/13464.html" title="图解日本">图解日本</a></strong>
-                            </td>
-                            <td class="author">
-                                <a target="_blank"  href="/u/60215656.html" title="猴面包树">
-
-                                    <img src="http://images.mafengwo.net/images/pp16.gif">
-                                    <span>猴面包树</span>
-                                </a>
-                            </td>
-                            <td class="view_num">
-                                <span>10/97331</span>
-                            </td>
-                            <td class="date_time"><span>12-06 17:19</span></td>
-                            <td class="reply">
-																                  <span class="avatar16">
-					<a target="_blank"  href="/u/60215656.html" title="猴面包树">
-                        <img src="http://a3-q.mafengwo.net/s6/M00/15/EB/wKgB4lMN91aAMR0NAALGKoMf1LY82.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                    </a>
-				  </span>
-                            </td>
-                        </tr>
-
-
-
-                        <tr>
-                            <td class="topic_tit">
-                                <img src="http://images.mafengwo.net/images/group/icon_new.gif">
-                                <h3><a target="_blank"  href="/g/i/6379112.html" title="今天来看看大家了。">今天来看看大家了。 </a></h3>
-                            </td>
-                            <td class="group_tit">
-                                <strong><a target="_blank"  href="/g/10196.html" title="蜂窝广场">蜂窝广场</a></strong>
-                            </td>
-                            <td class="author">
-                                <a target="_blank"  href="/u/82774539.html" title="地球">
-
-                                    <img src="http://images.mafengwo.net/images/pp16.gif">
-                                    <span>地球</span>
-                                </a>
-                            </td>
-                            <td class="view_num">
-                                <span>0/6</span>
-                            </td>
-                            <td class="date_time"><span>12-06 17:19</span></td>
-                            <td class="reply">
-																                  <span class="avatar16">
-					<a target="_blank"  href="/u/82774539.html" title="地球">
-                        <img src="http://n2-q.mafengwo.net/s9/M00/3A/17/wKgBs1fzJYSAOpnRAAEZCo2BJyU82.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                    </a>
-				  </span>
-                            </td>
-                        </tr>
-
-
-
-                        <tr>
-                            <td class="topic_tit">
-                                <img src="http://images.mafengwo.net/images/group/icon_ht.gif">
-                                <h3><a target="_blank"  href="/g/i/6363896.html" title="放下眼前的苟且，去看云南的诗和田野 2016年12月 自驾滇东南8天">放下眼前的苟且，去看云南的诗和... </a></h3>
-                            </td>
-                            <td class="group_tit">
-                                <strong><a target="_blank"  href="/g/10342.html" title="结伴同行">结伴同行</a></strong>
-                            </td>
-                            <td class="author">
-                                <a target="_blank"  href="/u/80116305.html" title="孤独烟囱">
-
-                                    <img src="http://images.mafengwo.net/images/pp16.gif">
-                                    <span>孤独烟囱</span>
-                                </a>
-                            </td>
-                            <td class="view_num">
-                                <span>2/35</span>
-                            </td>
-                            <td class="date_time"><span>12-06 17:11</span></td>
-                            <td class="reply">
-																                  <span class="avatar16">
-					<a target="_blank"  href="/u/80116305.html" title="孤独烟囱">
-                        <img src="http://images.mafengwo.net/images/pp16.gif">
-                    </a>
-				  </span>
-                            </td>
-                        </tr>
-
-
-
-                        <tr>
-                            <td class="topic_tit">
-                                <img src="http://images.mafengwo.net/images/group/icon_uptit.gif">
-                                <h3><a target="_blank"  href="/g/i/1320854.html" title="【新人老人】速速来这里报道，晒脸 ！！！">【新人老人】速速来这里报道，晒... </a></h3>
-                            </td>
-                            <td class="group_tit">
-                                <strong><a target="_blank"  href="/g/11428.html" title="【京舵】四海之内皆兄弟">【京舵】...</a></strong>
-                            </td>
-                            <td class="author">
-                                <a target="_blank"  href="/u/1016289.html" title="乱跑的猫">
-
-                                    <img src="http://images.mafengwo.net/images/pp16.gif">
-                                    <span>乱跑的猫</span>
-                                </a>
-                            </td>
-                            <td class="view_num">
-                                <span>469/14364</span>
-                            </td>
-                            <td class="date_time"><span>12-06 17:11</span></td>
-                            <td class="reply">
-																                  <span class="avatar16">
-					<a target="_blank"  href="/u/38141399.html" title="妙果随想">
-                        <img src="http://n4-q.mafengwo.net/s9/M00/97/31/wKgBs1bVadSALZ-hAADFF8UJ5QA57.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                    </a>
-				  </span>
-                            </td>
-                        </tr>
-
-
-
-                        <tr>
-                            <td class="topic_tit">
-                                <img src="http://images.mafengwo.net/images/Z33.gif">
-                                <h3><a target="_blank"  href="/g/i/6281471.html" title="【获奖名单公布】有大奖|驱 寻味，在路上追寻绝赞美味">【获奖名单公布】有大奖|驱 寻味... </a></h3>
-                            </td>
-                            <td class="group_tit">
-                                <strong><a target="_blank"  href="/g/10196.html" title="蜂窝广场">蜂窝广场</a></strong>
-                            </td>
-                            <td class="author">
-                                <a target="_blank"  href="/u/10024.html" title="蜂窝机器人">
-
-                                    <img src="http://images.mafengwo.net/images/pp16.gif">
-                                    <span>蜂窝机器人</span>
-                                </a>
-                            </td>
-                            <td class="view_num">
-                                <span>57/15767</span>
-                            </td>
-                            <td class="date_time"><span>12-06 17:06</span></td>
-                            <td class="reply">
-																                  <span class="avatar16">
-					<a target="_blank"  href="/u/10024.html" title="蜂窝机器人">
-                        <img src="http://c2-q.mafengwo.net/s9/M00/41/7A/wKgBs1Y4KeSAXHmoAAAaMq-e6us550.png?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                    </a>
-				  </span>
-                            </td>
-                        </tr>
-
-
-                        </tbody>
-
-                        <tbody id="hot_article_by_reply" class="topic_hot hide">
-
-                        <!-- 热门话题 -->
-
-
                         <tr>
                             <td class="topic_tit">
                                 <img src="http://images.mafengwo.net/images/group/icon_eve.gif">
-                                <h3><a target="_blank"  href="/g/i/3037383.html" title="【蚂蜂窝商店晒单啦】选选最用心的晒单照">【蚂蜂窝商店晒单啦】选选最用心... </a></h3>
+                                <h3><a target="_blank"  href="/g/i/3037383.html" title="【蚂蜂窝商店晒单啦】选选最用心的晒单照">】选选最用心... </a></h3>
                             </td>
                             <td class="group_tit">
-                                <strong><a target="_blank"  href="/g/13356.html" title="MFW问答">MFW问答</a></strong>
+                                <strong><a target="_blank"  href="/g/13356.html" title="MFW问答"></a></strong>
                             </td>
                             <td class="author">
                                 <a target="_blank"  href="/u/66033691.html" title="蚂蜂窝问答君">
@@ -607,407 +166,16 @@
 				</span>
                             </td>
                         </tr>
-
-
-                        <tr>
-                            <td class="topic_tit">
-                                <img src="http://images.mafengwo.net/images/group/icon_uptit.gif">
-                                <h3><a target="_blank"  href="/g/i/3099705.html" title="“我要上宝藏”--目的地宝藏长期申请通道！！！！">“我要上宝藏”--目的地宝藏长期... </a></h3>
-                            </td>
-                            <td class="group_tit">
-                                <strong><a target="_blank"  href="/g/13597.html" title="宝藏办公室">宝藏办公室</a></strong>
-                            </td>
-                            <td class="author">
-                                <a target="_blank"  href="/u/166011.html" title="蚂蜂窝宝藏办">
-                                    <img src="http://b3-q.mafengwo.net/s8/M00/C4/71/wKgBpVYtwq6AQSGAAAB-FsPcXLY598.png?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                                    <span>蚂蜂窝宝藏办</span>
-                                </a>
-                            </td>
-                            <td class="view_num">
-                                <span>9903/104636</span>
-                            </td>
-                            <td class="date_time"><span>12-06 16:32</span></td>
-                            <td class="reply">
-																                  <span class="avatar16">
-					<a target="_blank"  href="/u/5017331.html" title="Abby45">
-                        <img src="http://c4-q.mafengwo.net/s9/M00/2C/B4/wKgBs1dePNuAWzRWAAZqDELtLXk788.png?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                    </a>
-				</span>
-                            </td>
-                        </tr>
-
-
-                        <tr>
-                            <td class="topic_tit">
-                                <img src="http://images.mafengwo.net/images/Z33.gif">
-                                <h3><a target="_blank"  href="/g/i/5500499.html" title="【蚂蜂窝首页游记征集令】">【蚂蜂窝首页游记征集令】 </a></h3>
-                            </td>
-                            <td class="group_tit">
-                                <strong><a target="_blank"  href="/g/10196.html" title="蜂窝广场">蜂窝广场</a></strong>
-                            </td>
-                            <td class="author">
-                                <a target="_blank"  href="/u/388631.html" title="总编辑时间">
-                                    <img src="http://b3-q.mafengwo.net/s5/M00/79/26/wKgB3FYtwUaAJ22xAAAbWhJ0T8U441.png?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                                    <span>总编辑时间</span>
-                                </a>
-                            </td>
-                            <td class="view_num">
-                                <span>5702/76018</span>
-                            </td>
-                            <td class="date_time"><span>12-06 16:20</span></td>
-                            <td class="reply">
-																                  <span class="avatar16">
-					<a target="_blank"  href="/u/90517462.html" title="来自北极的小熊">
-                        <img src="http://c3-q.mafengwo.net/s9/M00/C1/A0/wKgBs1eYVR2AKbIMAACrxHjpd6439.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                    </a>
-				</span>
-                            </td>
-                        </tr>
-
-
-                        <tr>
-                            <td class="topic_tit">
-                                <img src="http://images.mafengwo.net/images/group/icon_uptit.gif">
-                                <h3><a target="_blank"  href="/g/i/995271.html" title="没有男朋友的进来，没有女朋友的也进来。">没有男朋友的进来，没有女朋友的... </a></h3>
-                            </td>
-                            <td class="group_tit">
-                                <strong><a target="_blank"  href="/g/11232.html" title="一个人旅行">一个人旅行</a></strong>
-                            </td>
-                            <td class="author">
-                                <a target="_blank"  href="/u/661377.html" title="Faye路过的风景">
-                                    <img src="http://c4-q.mafengwo.net/s5/M00/86/85/wKgB21BRi2bsHvXRAAC3ycFuCFg00.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                                    <span>Faye路过...</span>
-                                </a>
-                            </td>
-                            <td class="view_num">
-                                <span>4534/62746</span>
-                            </td>
-                            <td class="date_time"><span>12-05 11:49</span></td>
-                            <td class="reply">
-																                  <span class="avatar16">
-					<a target="_blank"  href="/u/34428118.html" title="繁花開逝">
-                        <img src="http://n4-q.mafengwo.net/s8/M00/A2/73/wKgBpVU3FhyAa3PCAAKxyNAAVrs85.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                    </a>
-				</span>
-                            </td>
-                        </tr>
-
-
-                        <tr>
-                            <td class="topic_tit">
-                                <img src="http://images.mafengwo.net/images/group/icon_uptit.gif">
-                                <h3><a target="_blank"  href="/g/i/588664.html" title="成为目的地宝藏不可不读的超强秘笈！！！！">成为目的地宝藏不可不读的超强秘... </a></h3>
-                            </td>
-                            <td class="group_tit">
-                                <strong><a target="_blank"  href="/g/13597.html" title="宝藏办公室">宝藏办公室</a></strong>
-                            </td>
-                            <td class="author">
-                                <a target="_blank"  href="/u/166011.html" title="蚂蜂窝宝藏办">
-                                    <img src="http://b3-q.mafengwo.net/s8/M00/C4/71/wKgBpVYtwq6AQSGAAAB-FsPcXLY598.png?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                                    <span>蚂蜂窝宝藏办</span>
-                                </a>
-                            </td>
-                            <td class="view_num">
-                                <span>3031/580859</span>
-                            </td>
-                            <td class="date_time"><span>12-04 16:31</span></td>
-                            <td class="reply">
-																                  <span class="avatar16">
-					<a target="_blank"  href="/u/63811426.html" title="幸福安康">
-                        <img src="http://c1-q.mafengwo.net/s9/M00/11/7F/wKgBs1ftj5-AJVvjAANxaBlxuwc00.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                    </a>
-				</span>
-                            </td>
-                        </tr>
-
-
-                        <tr>
-                            <td class="topic_tit">
-                                <img src="http://images.mafengwo.net/images/group/icon_uptit.gif">
-                                <h3><a target="_blank"  href="/g/i/5350499.html" title="关于星级游记的说明">关于星级游记的说明 </a></h3>
-                            </td>
-                            <td class="group_tit">
-                                <strong><a target="_blank"  href="/g/10196.html" title="蜂窝广场">蜂窝广场</a></strong>
-                            </td>
-                            <td class="author">
-                                <a target="_blank"  href="/u/388631.html" title="总编辑时间">
-                                    <img src="http://b3-q.mafengwo.net/s5/M00/79/26/wKgB3FYtwUaAJ22xAAAbWhJ0T8U441.png?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                                    <span>总编辑时间</span>
-                                </a>
-                            </td>
-                            <td class="view_num">
-                                <span>1964/181546</span>
-                            </td>
-                            <td class="date_time"><span>12-06 15:45</span></td>
-                            <td class="reply">
-																                  <span class="avatar16">
-					<a target="_blank"  href="/u/83037963.html" title="兔子耳语">
-                        <img src="http://c2-q.mafengwo.net/s9/M00/69/13/wKgBs1fzde6AKeIfAArtEb0hcIg25.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                    </a>
-				</span>
-                            </td>
-                        </tr>
-
-
-                        <tr>
-                            <td class="topic_tit">
-                                <img src="http://images.mafengwo.net/images/group/icon_bao.gif">
-                                <h3><a target="_blank"  href="/g/i/3114378.html" title="【游记进化论】新版游记，邀你公测（截止报名）">【游记进化论】新版游记，邀你公... </a></h3>
-                            </td>
-                            <td class="group_tit">
-                                <strong><a target="_blank"  href="/g/10196.html" title="蜂窝广场">蜂窝广场</a></strong>
-                            </td>
-                            <td class="author">
-                                <a target="_blank"  href="/u/114259.html" title="蜂窝机器人2号">
-                                    <img src="http://a3-q.mafengwo.net/s9/M00/BE/95/wKgBs1gEsDqAdemEAAIV8cGOxaM73.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                                    <span>蜂窝机器...</span>
-                                </a>
-                            </td>
-                            <td class="view_num">
-                                <span>1612/289738</span>
-                            </td>
-                            <td class="date_time"><span>12-02 11:09</span></td>
-                            <td class="reply">
-																                  <span class="avatar16">
-					<a target="_blank"  href="/u/31467238.html" title="宇宙人z">
-                        <img src="http://n4-q.mafengwo.net/s9/M00/60/67/wKgBs1Zad6yADYJ_AAJnEqPKMr043.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                    </a>
-				</span>
-                            </td>
-                        </tr>
-
-
-                        <tr>
-                            <td class="topic_tit">
-                                <img src="http://images.mafengwo.net/images/Z33.gif">
-                                <h3><a target="_blank"  href="/g/i/3045127.html" title="【蜂蜜大转盘】规则——第三季上线！（有更新）">【蜂蜜大转盘】规则——第三季上... </a></h3>
-                            </td>
-                            <td class="group_tit">
-                                <strong><a target="_blank"  href="/g/13356.html" title="MFW问答">MFW问答</a></strong>
-                            </td>
-                            <td class="author">
-                                <a target="_blank"  href="/u/66033691.html" title="蚂蜂窝问答君">
-                                    <img src="http://b2-q.mafengwo.net/s6/M00/FC/57/wKgB4lMZRf-AdWobAACKKTtf5DU33.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                                    <span>蚂蜂窝问答君</span>
-                                </a>
-                            </td>
-                            <td class="view_num">
-                                <span>1524/412479</span>
-                            </td>
-                            <td class="date_time"><span>12-06 09:46</span></td>
-                            <td class="reply">
-																                  <span class="avatar16">
-					<a target="_blank"  href="/u/91439185.html" title="零0_0柒">
-                        <img src="http://c2-q.mafengwo.net/s9/M00/8D/EC/wKgBs1g3MkeAJblaAACJ-TPpoC002.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                    </a>
-				</span>
-                            </td>
-                        </tr>
-
-
-                        <tr>
-                            <td class="topic_tit">
-                                <img src="http://images.mafengwo.net/images/group/icon_top.gif">
-                                <h3><a target="_blank"  href="/g/i/3220706.html" title="蚂蜂窝常见问题FAQ">蚂蜂窝常见问题FAQ </a></h3>
-                            </td>
-                            <td class="group_tit">
-                                <strong><a target="_blank"  href="/g/10196.html" title="蜂窝广场">蜂窝广场</a></strong>
-                            </td>
-                            <td class="author">
-                                <a target="_blank"  href="/u/388631.html" title="总编辑时间">
-                                    <img src="http://b3-q.mafengwo.net/s5/M00/79/26/wKgB3FYtwUaAJ22xAAAbWhJ0T8U441.png?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                                    <span>总编辑时间</span>
-                                </a>
-                            </td>
-                            <td class="view_num">
-                                <span>1220/136631</span>
-                            </td>
-                            <td class="date_time"><span>12-06 08:46</span></td>
-                            <td class="reply">
-																                  <span class="avatar16">
-					<a target="_blank"  href="/u/93210261.html" title="vkdokidoki">
-                        <img src="http://c3-q.mafengwo.net/s9/M00/CF/ED/wKgBs1fgyoSAFxdEAAOnBff0xcU10.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                    </a>
-				</span>
-                            </td>
-                        </tr>
-
-
-                        <tr>
-                            <td class="topic_tit">
-                                <img src="http://images.mafengwo.net/images/group/icon_uptit.gif">
-                                <h3><a target="_blank"  href="/g/i/2947856.html" title="什么是【蜂蜜】以及怎么获得【蜂蜜】">什么是【蜂蜜】以及怎么获得【蜂蜜】 </a></h3>
-                            </td>
-                            <td class="group_tit">
-                                <strong><a target="_blank"  href="/g/13692.html" title="蜂蜜商城">蜂蜜商城</a></strong>
-                            </td>
-                            <td class="author">
-                                <a target="_blank"  href="/u/114259.html" title="蜂窝机器人2号">
-                                    <img src="http://a3-q.mafengwo.net/s9/M00/BE/95/wKgBs1gEsDqAdemEAAIV8cGOxaM73.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                                    <span>蜂窝机器...</span>
-                                </a>
-                            </td>
-                            <td class="view_num">
-                                <span>980/311270</span>
-                            </td>
-                            <td class="date_time"><span>12-06 09:18</span></td>
-                            <td class="reply">
-																                  <span class="avatar16">
-					<a target="_blank"  href="/u/93405200.html" title="游蛇">
-                        <img src="http://images.mafengwo.net/images/pp16.gif">
-                    </a>
-				</span>
-                            </td>
-                        </tr>
-
-
-                        <tr>
-                            <td class="topic_tit">
-                                <img src="http://images.mafengwo.net/images/Z33.gif">
-                                <h3><a target="_blank"  href="/g/i/5482307.html" title="一段旅程的完成，是另一段旅行的开始。打卡&amp;每日任务全新升级">一段旅程的完成，是另一段旅行的... </a></h3>
-                            </td>
-                            <td class="group_tit">
-                                <strong><a target="_blank"  href="/g/10196.html" title="蜂窝广场">蜂窝广场</a></strong>
-                            </td>
-                            <td class="author">
-                                <a target="_blank"  href="/u/10024.html" title="蜂窝机器人">
-                                    <img src="http://c2-q.mafengwo.net/s9/M00/41/7A/wKgBs1Y4KeSAXHmoAAAaMq-e6us550.png?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                                    <span>蜂窝机器人</span>
-                                </a>
-                            </td>
-                            <td class="view_num">
-                                <span>943/271813</span>
-                            </td>
-                            <td class="date_time"><span>12-02 20:44</span></td>
-                            <td class="reply">
-																                  <span class="avatar16">
-					<a target="_blank"  href="/u/17709387.html" title="sunny20070">
-                        <img src="http://n1-q.mafengwo.net/s5/M00/B9/91/wKgB3FE2tbWAEMbbAAB9BrMGTEU04.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                    </a>
-				</span>
-                            </td>
-                        </tr>
-
-
-                        <tr>
-                            <td class="topic_tit">
-                                <img src="http://images.mafengwo.net/images/Z33.gif">
-                                <h3><a target="_blank"  href="/g/i/5317220.html" title="【游记常见问题与解答】">【游记常见问题与解答】 </a></h3>
-                            </td>
-                            <td class="group_tit">
-                                <strong><a target="_blank"  href="/g/10232.html" title="社区帮助中心">社区帮助中心</a></strong>
-                            </td>
-                            <td class="author">
-                                <a target="_blank"  href="/u/388631.html" title="总编辑时间">
-                                    <img src="http://b3-q.mafengwo.net/s5/M00/79/26/wKgB3FYtwUaAJ22xAAAbWhJ0T8U441.png?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                                    <span>总编辑时间</span>
-                                </a>
-                            </td>
-                            <td class="view_num">
-                                <span>903/95855</span>
-                            </td>
-                            <td class="date_time"><span>12-05 18:53</span></td>
-                            <td class="reply">
-																                  <span class="avatar16">
-					<a target="_blank"  href="/u/83350038.html" title="口口的故事里">
-                        <img src="http://a1-q.mafengwo.net/s5/M00/B2/BD/wKgB3FGsjq2AR-LUAABlJmdPeZw47.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                    </a>
-				</span>
-                            </td>
-                        </tr>
-
-
-                        <tr>
-                            <td class="topic_tit">
-                                <img src="http://images.mafengwo.net/images/group/icon_uptit.gif">
-                                <h3><a target="_blank"  href="/g/i/881383.html" title="也许遇见（牵红线游戏）">也许遇见（牵红线游戏） </a></h3>
-                            </td>
-                            <td class="group_tit">
-                                <strong><a target="_blank"  href="/g/11400.html" title="单身男女">单身男女</a></strong>
-                            </td>
-                            <td class="author">
-                                <a target="_blank"  href="/u/842179.html" title="若雨味甘">
-                                    <img src="http://n1-q.mafengwo.net/s3/M00/F2/FE/wKgBt09n9V3GoX3oAAAay5evpu434.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                                    <span>若雨味甘</span>
-                                </a>
-                            </td>
-                            <td class="view_num">
-                                <span>725/11287</span>
-                            </td>
-                            <td class="date_time"><span>12-03 01:27</span></td>
-                            <td class="reply">
-																                  <span class="avatar16">
-					<a target="_blank"  href="/u/77941323.html" title="夏沙">
-                        <img src="http://p4-q.mafengwo.net/s9/M00/29/C7/wKgBs1fQGpiAaCNcACGdqcMPTjo60.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                    </a>
-				</span>
-                            </td>
-                        </tr>
-
-
-                        <tr>
-                            <td class="topic_tit">
-                                <img src="http://images.mafengwo.net/images/group/icon_uptit.gif">
-                                <h3><a target="_blank"  href="/g/i/959539.html" title="能让你远离危险的20个自我防卫习惯(zt)">能让你远离危险的20个自我防卫习... </a></h3>
-                            </td>
-                            <td class="group_tit">
-                                <strong><a target="_blank"  href="/g/11232.html" title="一个人旅行">一个人旅行</a></strong>
-                            </td>
-                            <td class="author">
-                                <a target="_blank"  href="/u/787405.html" title="Jacky">
-                                    <img src="http://a3-q.mafengwo.net/s7/M00/F1/63/wKgB6lRIzjWAfai4AAHOZq_hsaY79.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                                    <span>Jacky</span>
-                                </a>
-                            </td>
-                            <td class="view_num">
-                                <span>616/6605</span>
-                            </td>
-                            <td class="date_time"><span>12-02 10:32</span></td>
-                            <td class="reply">
-																                  <span class="avatar16">
-					<a target="_blank"  href="/u/852533.html" title="Ｄ_▂.調℡">
-                        <img src="http://b2-q.mafengwo.net/s6/M00/D0/2D/wKgB4lOG4y-AMg8aAAEDZnbvQmo40.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                    </a>
-				</span>
-                            </td>
-                        </tr>
-
-
+                        </tbody>
+                        <tbody id="hot_article_by_reply" class="topic_hot">
+                        <!-- 热门话题 -->
                         <tr>
                             <td class="topic_tit">
                                 <img src="http://images.mafengwo.net/images/group/icon_eve.gif">
-                                <h3><a target="_blank"  href="/g/i/1319445.html" title="发一张图证明你对登山的热爱">发一张图证明你对登山的热爱 </a></h3>
+                                <h3><a target="_blank"  href="/g/i/3037383.html" title="【蚂蜂窝商店晒单啦】选选最用心的晒单照">【蚂蜂窝商店晒单啦】选选最用心... </a></h3>
                             </td>
                             <td class="group_tit">
-                                <strong><a target="_blank"  href="/g/11876.html" title="马拉松与公益">马拉松与公益</a></strong>
-                            </td>
-                            <td class="author">
-                                <a target="_blank"  href="/u/682387.html" title="刘Tristan">
-                                    <img src="http://n1-q.mafengwo.net/s3/M00/8E/AB/wKgBjE8lNKzogR0ZAAAZzviWaPY14.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                                    <span>刘Tristan</span>
-                                </a>
-                            </td>
-                            <td class="view_num">
-                                <span>508/189736</span>
-                            </td>
-                            <td class="date_time"><span>12-06 09:34</span></td>
-                            <td class="reply">
-																                  <span class="avatar16">
-					<a target="_blank"  href="/u/93221269.html" title="诗和远方">
-                        <img src="http://a2-q.mafengwo.net/s9/M00/87/7D/wKgBs1gqhMOAA4tpACrzefbzDZo38.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                    </a>
-				</span>
-                            </td>
-                        </tr>
-
-
-                        <tr>
-                            <td class="topic_tit">
-                                <img src="http://images.mafengwo.net/images/Z33.gif">
-                                <h3><a target="_blank"  href="/g/i/6247691.html" title="「摄影研究所」晒图有奖【获奖名单公布】">「摄影研究所」晒图有奖【获奖名... </a></h3>
-                            </td>
-                            <td class="group_tit">
-                                <strong><a target="_blank"  href="/g/13356.html" title="MFW问答">MFW问答</a></strong>
+                                <strong><a target="_blank"  href="/g/13356.html" title="MFW问答"></a></strong>
                             </td>
                             <td class="author">
                                 <a target="_blank"  href="/u/66033691.html" title="蚂蜂窝问答君">
@@ -1016,125 +184,13 @@
                                 </a>
                             </td>
                             <td class="view_num">
-                                <span>482/32144</span>
+                                <span>10703/589337</span>
                             </td>
-                            <td class="date_time"><span>12-03 20:03</span></td>
+                            <td class="date_time"><span>12-06 11:04</span></td>
                             <td class="reply">
 																                  <span class="avatar16">
-					<a target="_blank"  href="/u/66033691.html" title="蚂蜂窝问答君">
-                        <img src="http://b2-q.mafengwo.net/s6/M00/FC/57/wKgB4lMZRf-AdWobAACKKTtf5DU33.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                    </a>
-				</span>
-                            </td>
-                        </tr>
-
-
-                        <tr>
-                            <td class="topic_tit">
-                                <img src="http://images.mafengwo.net/images/Z33.gif">
-                                <h3><a target="_blank"  href="/g/i/5483469.html" title="喵(&gt;^ω^&lt;)--一丁点黑猫">喵(&gt;^ω^&lt;)--一丁点黑猫 </a></h3>
-                            </td>
-                            <td class="group_tit">
-                                <strong><a target="_blank"  href="/g/10196.html" title="蜂窝广场">蜂窝广场</a></strong>
-                            </td>
-                            <td class="author">
-                                <a target="_blank"  href="/u/41509640.html" title="游盲">
-                                    <img src="http://a2-q.mafengwo.net/s8/M00/A3/6D/wKgBpVWSffWAe3BgAAUuh5mrt0M85.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                                    <span>游盲</span>
-                                </a>
-                            </td>
-                            <td class="view_num">
-                                <span>455/13152</span>
-                            </td>
-                            <td class="date_time"><span>12-05 19:23</span></td>
-                            <td class="reply">
-																                  <span class="avatar16">
-					<a target="_blank"  href="/u/378648.html" title="bobzhouwei">
-                        <img src="http://n4-q.mafengwo.net/s9/M00/93/B4/wKgBs1g3iCyAWDLWAABkoN-w-ek38.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                    </a>
-				</span>
-                            </td>
-                        </tr>
-
-
-                        <tr>
-                            <td class="topic_tit">
-                                <img src="http://images.mafengwo.net/images/group/icon_uptit.gif">
-                                <h3><a target="_blank"  href="/g/i/770195.html" title="深圳蜂蜂报道帖">深圳蜂蜂报道帖 </a></h3>
-                            </td>
-                            <td class="group_tit">
-                                <strong><a target="_blank"  href="/g/11635.html" title="【深圳舵】东方之珠">【深圳舵...</a></strong>
-                            </td>
-                            <td class="author">
-                                <a target="_blank"  href="/u/125473.html" title="沫沫❤glory">
-                                    <img src="http://n2-q.mafengwo.net/s1/M00/02/0C/wKgBm035a9XG2IurAAAeXMOcTck99.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                                    <span>沫沫❤glory</span>
-                                </a>
-                            </td>
-                            <td class="view_num">
-                                <span>453/6027</span>
-                            </td>
-                            <td class="date_time"><span>12-04 20:32</span></td>
-                            <td class="reply">
-																                  <span class="avatar16">
-					<a target="_blank"  href="/u/41747382.html" title="蚂蜂窝用户">
-                        <img src="http://n1-q.mafengwo.net/s9/M00/FE/82/wKgBs1egKHCADiUBAADLweZaWhw75.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                    </a>
-				</span>
-                            </td>
-                        </tr>
-
-
-                        <tr>
-                            <td class="topic_tit">
-                                <img src="http://images.mafengwo.net/images/group/icon_uptit.gif">
-                                <h3><a target="_blank"  href="/g/i/3100180.html" title="“我要上宝藏”--宝藏申请VIP绿色通道">“我要上宝藏”--宝藏申请VIP绿色... </a></h3>
-                            </td>
-                            <td class="group_tit">
-                                <strong><a target="_blank"  href="/g/13439.html" title="蚂蜂窝VIP">蚂蜂窝VIP</a></strong>
-                            </td>
-                            <td class="author">
-                                <a target="_blank"  href="/u/372663.html" title="VIP管理员">
-                                    <img src="http://b3-q.mafengwo.net/s8/M00/19/4C/wKgBpVYkpQ-AdHffAABZ5gIyAZc073.png?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                                    <span>VIP管理员</span>
-                                </a>
-                            </td>
-                            <td class="view_num">
-                                <span>433/15431</span>
-                            </td>
-                            <td class="date_time"><span>12-01 17:25</span></td>
-                            <td class="reply">
-																                  <span class="avatar16">
-					<a target="_blank"  href="/u/63730094.html" title="白白猪-BB">
-                        <img src="http://c3-q.mafengwo.net/s6/M00/D6/11/wKgB4lLnsl6APG96AAEBbncV1ck11.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                    </a>
-				</span>
-                            </td>
-                        </tr>
-
-
-                        <tr>
-                            <td class="topic_tit">
-                                <img src="http://images.mafengwo.net/images/group/icon_uptit.gif">
-                                <h3><a target="_blank"  href="/g/i/6191603.html" title="【68期获奖公布！】请上传一张你最满意的照片">【68期获奖公布！】请上传一张你... </a></h3>
-                            </td>
-                            <td class="group_tit">
-                                <strong><a target="_blank"  href="/g/10939.html" title="照片PK讨论组">照片PK讨论组</a></strong>
-                            </td>
-                            <td class="author">
-                                <a target="_blank"  href="/u/10024.html" title="蜂窝机器人">
-                                    <img src="http://c2-q.mafengwo.net/s9/M00/41/7A/wKgBs1Y4KeSAXHmoAAAaMq-e6us550.png?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
-                                    <span>蜂窝机器人</span>
-                                </a>
-                            </td>
-                            <td class="view_num">
-                                <span>424/372</span>
-                            </td>
-                            <td class="date_time"><span>12-05 16:46</span></td>
-                            <td class="reply">
-																                  <span class="avatar16">
-					<a target="_blank"  href="/u/10024.html" title="蜂窝机器人">
-                        <img src="http://c2-q.mafengwo.net/s9/M00/41/7A/wKgBs1Y4KeSAXHmoAAAaMq-e6us550.png?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
+					<a target="_blank"  href="/u/17473712.html" title="偶爱嘉年华">
+                        <img src="http://n2-q.mafengwo.net/s9/M00/2F/89/wKgBs1crDdiAB0erAAEmwDZq4R493.jpeg?imageMogr2%2Fthumbnail%2F%2116x16r%2Fgravity%2FCenter%2Fcrop%2F%2116x16%2Fquality%2F90">
                     </a>
 				</span>
                             </td>
@@ -1146,7 +202,7 @@
                 </div>
             </div>
         </div>
-        <div class="title"><h2>最活跃小组</h2></div>
+        <div class="title"><h2>最活跃兔兔丝</h2></div>
         <div class="gm1">
             <ul class="clearfix">
                 <li class="item">
@@ -1166,20 +222,7 @@
 
             </ul>
         </div>
-        <div class="title">
-            <h2>小组精选</h2>
-            <ul>
-                <li class="title_item"><a href="#archor_1">旅行主义</a></li>
-                <li class="title_item"><a href="#archor_2">户外运动</a></li>
-                <li class="title_item"><a href="#archor_3">摄影</a></li>
-                <li class="title_item"><a href="#archor_4">美食-吃货</a></li>
-                <li class="title_item"><a href="#archor_5">书-影-音</a></li>
-                <li class="title_item"><a href="#archor_6">装备收藏</a></li>
-                <li class="title_item"><a href="#archor_7">情感生活</a></li>
-                <li class="title_item"><a href="#archor_8">MFW官方</a></li>
-                <li class="title_item"><a href="#archor_10">分舵同城</a></li>
-            </ul>
-        </div>
+        <hr>
         <div class="choice">
 
 
@@ -1353,174 +396,6 @@
             </div>
             <div class="gm2 clearfix">
                 <h2 class="group_type">
-                    <strong><a href="/group/glist.php?pid=4" target="_blank" name="archor_4" id="archor_4">美食-吃货
-                        <span>(104).</span></a></strong>
-                </h2>
-                <ul class="clearfix">
-
-
-                    <li>
-                        <div class="pic"><a target="_blank"  href="/g/11134.html" title="走哪吃哪"><img src="http://a1-q.mafengwo.net/s1/M00/1D/14/wKgBm02ek6Dp0TEfAAAVoyAo79810.jpeg?imageView2%2F2%2Fw%2F68%2Fh%2F68%2Fq%2F90"></a></div>
-                        <h3><a target="_blank"  href="/g/11134.html">走哪吃哪</a></h3>
-                        <p class="gray">109个帖子</p>
-                    </li>
-
-
-
-                    <li>
-                        <div class="pic"><a target="_blank"  href="/g/11162.html" title="美食地图"><img src="http://c2-q.mafengwo.net/s4/M00/CF/12/wKgByU_ho4Xm0sQWAABQzyNU0sQ28.jpeg?imageView2%2F2%2Fw%2F68%2Fh%2F68%2Fq%2F90"></a></div>
-                        <h3><a target="_blank"  href="/g/11162.html">美食地图</a></h3>
-                        <p class="gray">693个帖子</p>
-                    </li>
-
-
-
-                    <li>
-                        <div class="pic"><a target="_blank"  href="/g/10231.html" title="我爱厨房"><img src="http://a1-q.mafengwo.net/s1/M00/1D/04/wKgBm02ejxOfPH3OAAClwRSAFiQ71.jpeg?imageView2%2F2%2Fw%2F68%2Fh%2F68%2Fq%2F90"></a></div>
-                        <h3><a target="_blank"  href="/g/10231.html">我爱厨房</a></h3>
-                        <p class="gray">546个帖子</p>
-                    </li>
-
-
-
-                    <li>
-                        <div class="pic"><a target="_blank"  href="/g/11070.html" title="小吃零食~吃货一族"><img src="http://c4-q.mafengwo.net/s3/M00/8D/F8/wKgBt0_2nQyIisOwAAAPCVYyQ3851.jpeg?imageView2%2F2%2Fw%2F68%2Fh%2F68%2Fq%2F90"></a></div>
-                        <h3><a target="_blank"  href="/g/11070.html">小吃零食~吃货一族</a></h3>
-                        <p class="gray">118个帖子</p>
-                    </li>
-
-
-
-                    <li>
-                        <div class="pic"><a target="_blank"  href="/g/11700.html" title="Love美食"><img src="http://b1-q.mafengwo.net/s6/M00/5C/A5/wKgB4lOjxKuALPnKAABJv9ntst411.jpeg?imageView2%2F2%2Fw%2F68%2Fh%2F68%2Fq%2F90"></a></div>
-                        <h3><a target="_blank"  href="/g/11700.html">Love美食</a></h3>
-                        <p class="gray">2130个帖子</p>
-                    </li>
-
-
-
-                    <li>
-                        <div class="pic"><a target="_blank"  href="/g/11655.html" title="美食总动员"><img src="http://a1-q.mafengwo.net/s5/M00/8D/17/wKgB3FGZuLCAbCOAAAAtqjKSJIQ44.jpeg?imageView2%2F2%2Fw%2F68%2Fh%2F68%2Fq%2F90"></a></div>
-                        <h3><a target="_blank"  href="/g/11655.html">美食总动员</a></h3>
-                        <p class="gray">2604个帖子</p>
-                    </li>
-
-                </ul>
-            </div>
-            <div class="gm2 clearfix">
-                <h2 class="group_type">
-                    <strong><a href="/group/glist.php?pid=5" target="_blank" name="archor_5" id="archor_5">书-影-音
-                        <span>(138).</span></a></strong>
-                </h2>
-                <ul class="clearfix">
-
-
-                    <li>
-                        <div class="pic"><a target="_blank"  href="/g/11572.html" title="经典阅读"><img src="http://b1-q.mafengwo.net/s4/M00/D1/7C/wKgByU_hqebt8EnTAABQDAi-5uE20.jpeg?imageView2%2F2%2Fw%2F68%2Fh%2F68%2Fq%2F90"></a></div>
-                        <h3><a target="_blank"  href="/g/11572.html">经典阅读</a></h3>
-                        <p class="gray">934个帖子</p>
-                    </li>
-
-
-
-                    <li>
-                        <div class="pic"><a target="_blank"  href="/g/11441.html" title="我们都是文艺好青年"><img src="http://a2-q.mafengwo.net/s1/M00/B2/41/wKgBm04RLpqGCHd6AAAegd0OYsg38.jpeg?imageView2%2F2%2Fw%2F68%2Fh%2F68%2Fq%2F90"></a></div>
-                        <h3><a target="_blank"  href="/g/11441.html">我们都是文艺好青年</a></h3>
-                        <p class="gray">462个帖子</p>
-                    </li>
-
-
-
-                    <li>
-                        <div class="pic"><a target="_blank"  href="/g/11567.html" title="跟着电影去旅行"><img src="http://n2-q.mafengwo.net/s4/M00/A0/C1/wKgByU_hVmnfVtfZAAAN2yPo9ck14.jpeg?imageView2%2F2%2Fw%2F68%2Fh%2F68%2Fq%2F90"></a></div>
-                        <h3><a target="_blank"  href="/g/11567.html">跟着电影去旅行</a></h3>
-                        <p class="gray">663个帖子</p>
-                    </li>
-
-
-
-                    <li>
-                        <div class="pic"><a target="_blank"  href="/g/10038.html" title="蚂蜂窝旅行电台"><img src="http://c4-q.mafengwo.net/s5/M00/2C/C3/wKgB3FILGY6Aa5d6AABAczfBfO492.jpeg?imageView2%2F2%2Fw%2F68%2Fh%2F68%2Fq%2F90"></a></div>
-                        <h3><a target="_blank"  href="/g/10038.html">蚂蜂窝旅行电台</a></h3>
-                        <p class="gray">841个帖子</p>
-                    </li>
-
-
-
-                    <li>
-                        <div class="pic"><a target="_blank"  href="/g/11589.html" title="走走，听听……"><img src="http://a1-q.mafengwo.net/s4/M00/CF/FC/wKgByU_hpdD4NcB0AAALg78nYP839.jpeg?imageView2%2F2%2Fw%2F68%2Fh%2F68%2Fq%2F90"></a></div>
-                        <h3><a target="_blank"  href="/g/11589.html">走走，听听……</a></h3>
-                        <p class="gray">811个帖子</p>
-                    </li>
-
-
-
-                    <li>
-                        <div class="pic"><a target="_blank"  href="/g/10013.html" title="电影世界"><img src="http://n4-q.mafengwo.net/s4/M00/CF/C9/wKgByU_hpV38_2aLAAANr8ndTK884.jpeg?imageView2%2F2%2Fw%2F68%2Fh%2F68%2Fq%2F90"></a></div>
-                        <h3><a target="_blank"  href="/g/10013.html">电影世界</a></h3>
-                        <p class="gray">394个帖子</p>
-                    </li>
-
-                </ul>
-            </div>
-            <div class="gm2 clearfix">
-                <h2 class="group_type">
-                    <strong><a href="/group/glist.php?pid=6" target="_blank" name="archor_6" id="archor_6">装备收藏
-                        <span>(58).</span></a></strong>
-                </h2>
-                <ul class="clearfix">
-
-
-                    <li>
-                        <div class="pic"><a target="_blank"  href="/g/11616.html" title="佳能单反"><img src="http://a2-q.mafengwo.net/s4/M00/D0/37/wKgByU_hpkjfCxOtAABWX893G3I03.jpeg?imageView2%2F2%2Fw%2F68%2Fh%2F68%2Fq%2F90"></a></div>
-                        <h3><a target="_blank"  href="/g/11616.html">佳能单反</a></h3>
-                        <p class="gray">276个帖子</p>
-                    </li>
-
-
-
-                    <li>
-                        <div class="pic"><a target="_blank"  href="/g/11726.html" title="单电，微电转接交流"><img src="http://c4-q.mafengwo.net/s1/M00/9C/44/wKgBsU_1Rc_310VyAAAljg4IZHI67.jpeg?imageView2%2F2%2Fw%2F68%2Fh%2F68%2Fq%2F90"></a></div>
-                        <h3><a target="_blank"  href="/g/11726.html">单电，微电转接交流</a></h3>
-                        <p class="gray">38个帖子</p>
-                    </li>
-
-
-
-                    <li>
-                        <div class="pic"><a target="_blank"  href="/g/10891.html" title="卡片机俱乐部"><img src="http://c1-q.mafengwo.net/s1/M00/9C/63/wKgBsU_1RpWxdZatAAAjWUsc4ZM53.jpeg?imageView2%2F2%2Fw%2F68%2Fh%2F68%2Fq%2F90"></a></div>
-                        <h3><a target="_blank"  href="/g/10891.html">卡片机俱乐部</a></h3>
-                        <p class="gray">198个帖子</p>
-                    </li>
-
-
-
-                    <li>
-                        <div class="pic"><a target="_blank"  href="/g/10283.html" title="旅行与装备"><img src="http://n1-q.mafengwo.net/s4/M00/14/57/wKgByU_1R1DAeUt2AAAvOLOmptg51.jpeg?imageView2%2F2%2Fw%2F68%2Fh%2F68%2Fq%2F90"></a></div>
-                        <h3><a target="_blank"  href="/g/10283.html">旅行与装备</a></h3>
-                        <p class="gray">218个帖子</p>
-                    </li>
-
-
-
-                    <li>
-                        <div class="pic"><a target="_blank"  href="/g/11652.html" title="玩转装备"><img src="http://a4-q.mafengwo.net/s2/M00/54/97/wKgBpU6573Gba4f9AACnHa7Qkxs43.jpeg?imageView2%2F2%2Fw%2F68%2Fh%2F68%2Fq%2F90"></a></div>
-                        <h3><a target="_blank"  href="/g/11652.html">玩转装备</a></h3>
-                        <p class="gray">188个帖子</p>
-                    </li>
-
-
-
-                    <li>
-                        <div class="pic"><a target="_blank"  href="/g/11471.html" title="户外装备"><img src="http://n1-q.mafengwo.net/s2/M00/A6/81/wKgBpU4o5C60KkVzAAAWynqQ2q439.jpeg?imageView2%2F2%2Fw%2F68%2Fh%2F68%2Fq%2F90"></a></div>
-                        <h3><a target="_blank"  href="/g/11471.html">户外装备</a></h3>
-                        <p class="gray">138个帖子</p>
-                    </li>
-
-                </ul>
-            </div>
-            <div class="gm2 clearfix">
-                <h2 class="group_type">
                     <strong><a href="/group/glist.php?pid=7" target="_blank" name="archor_7" id="archor_7">情感生活
                         <span>(205).</span></a></strong>
                 </h2>
@@ -1575,192 +450,15 @@
 
                 </ul>
             </div>
-            <div class="gm2 clearfix">
-                <h2 class="group_type">
-                    <strong><a href="/group/glist.php?pid=8" target="_blank" name="archor_8" id="archor_8">MFW官方
-                        <span>(43).</span></a></strong>
-                </h2>
-                <ul class="clearfix">
-
-
-                    <li>
-                        <div class="pic"><a target="_blank"  href="/g/13356.html" title="MFW问答"><img src="http://p3-q.mafengwo.net/s6/M00/2F/EB/wKgB4lK5T-yAB6rdAADha-lmTSM225.png?imageView2%2F2%2Fw%2F68%2Fh%2F68%2Fq%2F90"></a></div>
-                        <h3><a target="_blank"  href="/g/13356.html">MFW问答</a></h3>
-                        <p class="gray">247个帖子</p>
-                    </li>
-
-
-
-                    <li>
-                        <div class="pic"><a target="_blank"  href="/g/10939.html" title="照片PK讨论组"><img src="http://a2-q.mafengwo.net/s5/M00/1F/CB/wKgB3FDS0vKAa2IKAAAlsBp0AFQ325.png?imageView2%2F2%2Fw%2F68%2Fh%2F68%2Fq%2F90"></a></div>
-                        <h3><a target="_blank"  href="/g/10939.html">照片PK讨论组</a></h3>
-                        <p class="gray">2402个帖子</p>
-                    </li>
-
-
-
-                    <li>
-                        <div class="pic"><a target="_blank"  href="/g/11682.html" title="蜂窝客栈"><img src="http://b4-q.mafengwo.net/s1/M00/0E/A6/wKgBm07MquXbdePXAAASbal43sM10.jpeg?imageView2%2F2%2Fw%2F68%2Fh%2F68%2Fq%2F90"></a></div>
-                        <h3><a target="_blank"  href="/g/11682.html">蜂窝客栈</a></h3>
-                        <p class="gray">126个帖子</p>
-                    </li>
-
-
-
-                    <li>
-                        <div class="pic"><a target="_blank"  href="/g/10232.html" title="社区帮助中心"><img src="http://a2-q.mafengwo.net/s4/M00/CD/F3/wKgByU_hoJnDYyK9AABE9DmSrj468.jpeg?imageView2%2F2%2Fw%2F68%2Fh%2F68%2Fq%2F90"></a></div>
-                        <h3><a target="_blank"  href="/g/10232.html">社区帮助中心</a></h3>
-                        <p class="gray">896个帖子</p>
-                    </li>
-
-
-
-                    <li>
-                        <div class="pic"><a target="_blank"  href="/g/11096.html" title="TT旅行"><img src="http://n1-q.mafengwo.net/s4/M00/CE/E6/wKgByU_hovqo4nXDAABEaif-NVE79.jpeg?imageView2%2F2%2Fw%2F68%2Fh%2F68%2Fq%2F90"></a></div>
-                        <h3><a target="_blank"  href="/g/11096.html">TT旅行</a></h3>
-                        <p class="gray">804个帖子</p>
-                    </li>
-
-
-
-                    <li>
-                        <div class="pic"><a target="_blank"  href="/g/11996.html" title="旅行制片厂"><img src="http://a1-q.mafengwo.net/s4/M00/79/CF/wKgBwU_EySmXZYebAAAdrLWlNgQ57.jpeg?imageView2%2F2%2Fw%2F68%2Fh%2F68%2Fq%2F90"></a></div>
-                        <h3><a target="_blank"  href="/g/11996.html">旅行制片厂</a></h3>
-                        <p class="gray">80个帖子</p>
-                    </li>
-
-
-
-                    <li>
-                        <div class="pic"><a target="_blank"  href="/g/11988.html" title="主题攻略组"><img src="http://n1-q.mafengwo.net/s5/M00/D7/0C/wKgB3FFRYV6APcQZAABoO1LwPXo84.jpeg?imageView2%2F2%2Fw%2F68%2Fh%2F68%2Fq%2F90"></a></div>
-                        <h3><a target="_blank"  href="/g/11988.html">主题攻略组</a></h3>
-                        <p class="gray">86个帖子</p>
-                    </li>
-
-                </ul>
-            </div>
-            <div class="gm2 clearfix">
-                <h2 class="group_type">
-                    <strong><a href="/group/glist.php?pid=10" target="_blank" name="archor_10" id="archor_10">分舵同城
-                        <span>(254).</span></a></strong>
-                </h2>
-                <ul class="clearfix">
-
-
-                    <li>
-                        <div class="pic"><a target="_blank"  href="/g/11635.html" title="【深圳舵】东方之珠"><img src="http://c1-q.mafengwo.net/s5/M00/B9/35/wKgB3FGMtoiAfOkHAABr44eEdxQ13.jpeg?imageView2%2F2%2Fw%2F68%2Fh%2F68%2Fq%2F90"></a></div>
-                        <h3><a target="_blank"  href="/g/11635.html">【深圳舵】东方之珠</a></h3>
-                        <p class="gray">1114个帖子</p>
-                    </li>
-
-
-
-                    <li>
-                        <div class="pic"><a target="_blank"  href="/g/11642.html" title="【沪舵】上善若水，海纳百川"><img src="http://c3-q.mafengwo.net/s5/M00/C7/B1/wKgB3FGiGVuAOzxnAAFoVjfto3406.jpeg?imageView2%2F2%2Fw%2F68%2Fh%2F68%2Fq%2F90"></a></div>
-                        <h3><a target="_blank"  href="/g/11642.html">【沪舵】上善若水，海纳百川</a></h3>
-                        <p class="gray">1890个帖子</p>
-                    </li>
-
-
-
-                    <li>
-                        <div class="pic"><a target="_blank"  href="/g/11630.html" title="【武汉舵】带给你最“汉味”的体验"><img src="http://c2-q.mafengwo.net/s2/M00/DE/1A/wKgBpU6yboX-Ru2nAAAQbCAljZQ69.jpeg?imageView2%2F2%2Fw%2F68%2Fh%2F68%2Fq%2F90"></a></div>
-                        <h3><a target="_blank"  href="/g/11630.html">【武汉舵】带给你最“汉味”的体验</a></h3>
-                        <p class="gray">783个帖子</p>
-                    </li>
-
-
-
-                    <li>
-                        <div class="pic"><a target="_blank"  href="/g/11629.html" title="【苏州舵】 清风明月本无价，近水遥山皆有情"><img src="http://c3-q.mafengwo.net/s2/M00/EC/05/wKgBpU6ylOKgmOpKAAF9z3YcRTo99.jpeg?imageView2%2F2%2Fw%2F68%2Fh%2F68%2Fq%2F90"></a></div>
-                        <h3><a target="_blank"  href="/g/11629.html">【苏州舵】 清风明月本无价，近水遥山皆有情</a></h3>
-                        <p class="gray">643个帖子</p>
-                    </li>
-
-
-
-                    <li>
-                        <div class="pic"><a target="_blank"  href="/g/11628.html" title="【川舵】一个来了就不想走的地方"><img src="http://b3-q.mafengwo.net/s5/M00/AF/91/wKgB3FH13BmAYy-WAAAyp4xT3ng12.jpeg?imageView2%2F2%2Fw%2F68%2Fh%2F68%2Fq%2F90"></a></div>
-                        <h3><a target="_blank"  href="/g/11628.html">【川舵】一个来了就不想走的地方</a></h3>
-                        <p class="gray">2327个帖子</p>
-                    </li>
-
-
-
-                    <li>
-                        <div class="pic"><a target="_blank"  href="/g/11428.html" title="【京舵】四海之内皆兄弟"><img src="http://a4-q.mafengwo.net/s5/M00/10/02/wKgB3FGCcmeASsEKAAEVEBS87DA77.jpeg?imageView2%2F2%2Fw%2F68%2Fh%2F68%2Fq%2F90"></a></div>
-                        <h3><a target="_blank"  href="/g/11428.html">【京舵】四海之内皆兄弟</a></h3>
-                        <p class="gray">6364个帖子</p>
-                    </li>
-
-                </ul>
-            </div>
-
         </div>
     </div>
     <div class="col_side">
-        <form onsubmit="submit_search(this)" method="post" name="search_group">
-            <div class="g_search clearfix">
-                <div id="group_search" class="gs_menu">
-                    <span class="item hide">话题</span>
-                    <span class="selected">小组</span>
-                </div>
-                <input type="hidden" name="type" value='0' id="search_type" />
-                <input type="hidden" name="gid" value='0' />
-                <input class="ipt_k" name="word" value="搜索小组或者话题" type="text">
-                <input type="submit" class="sumbit" value="搜索"/>
-            </div>
-        </form>
-        <div class="gmt">
-            <h2>各小组宝藏</h2>
-        </div>
-        <div class="gmc1">
-            <ul class="gmc_list">
 
-
-
-                <li>
-                    <a target="_blank"  class="g_title" href="/g/i/2947926.html" title="蚂蜂窝【问答指路人】招募强档开启！！！">蚂蜂窝【问答指路人】招募强档开...</a><span class="view_num">395/430099</span>
-                    <p><a target="_blank"  class="t_title" href="/g/13356.html" title="MFW问答">MFW问答</a>成员：4874724</p>
-                </li>
-
-
-                <li>
-                    <a target="_blank"  class="g_title" href="/g/i/1320854.html" title="【新人老人】速速来这里报道，晒脸 ！！！">【新人老人】速速来这里报道，晒...</a><span class="view_num">469/14364</span>
-                    <p><a target="_blank"  class="t_title" href="/g/11428.html" title="【京舵】四海之内皆兄弟">【京舵】四海之内皆兄弟</a>成员：15920</p>
-                </li>
-
-
-                <li>
-                    <a target="_blank"  class="g_title" href="/g/i/3099705.html" title="“我要上宝藏”--目的地宝藏长期申请通道！！！！">“我要上宝藏”--目的地宝藏长期...</a><span class="view_num">9903/104636</span>
-                    <p><a target="_blank"  class="t_title" href="/g/13597.html" title="宝藏办公室">宝藏办公室</a>成员：37403</p>
-                </li>
-
-
-                <li>
-                    <a target="_blank"  class="g_title" href="/g/i/3047487.html" title="【蜂首微访谈】#第二期#海盗王基德教你如何从零开始拍摄浩瀚星空！">【蜂首微访谈】#第二期#海盗王基...</a><span class="view_num">186/18691</span>
-                    <p><a target="_blank"  class="t_title" href="/g/10196.html" title="蜂窝广场">蜂窝广场</a>成员：7751607</p>
-                </li>
-
-
-                <li>
-                    <a target="_blank"  class="g_title" href="/g/i/5709035.html" title="[游记活动] 用手机记录你的假期旅行">[游记活动] 用手机记录你的假期旅行</a><span class="view_num">155/107784</span>
-                    <p><a target="_blank"  class="t_title" href="/g/10196.html" title="蜂窝广场">蜂窝广场</a>成员：7751607</p>
-                </li>
-
-
-                <li>
-                    <a target="_blank"  class="g_title" href="/g/i/2947856.html" title="什么是【蜂蜜】以及怎么获得【蜂蜜】">什么是【蜂蜜】以及怎么获得【蜂蜜】</a><span class="view_num">980/311270</span>
-                    <p><a target="_blank"  class="t_title" href="/g/13692.html" title="蜂蜜商城">蜂蜜商城</a>成员：4880798</p>
-                </li>
-
-            </ul>
-        </div>
         <div class="banner290" id="banner290">
             <div style="position:relative"><a target="_blank" href="http://www.mafengwo.cn/ad/r.php?key=YFhYQA" rel="nofollow"><img border="0" src="https://n3-q.mafengwo.net/s9/M00/9D/C9/wKgBs1gynDGAeXukAACNxXJ2X7U86.jpeg" /></a><img src="http://images.mafengwo.net/images/ad/icon.png?v=20160829" style="position:absolute;bottom: 4px;left:4px;width:22px;height:12px;" /></div>
         </div>
         <div class="gmt">
-            <h2>最新同城聚会</h2>
+            <h2>同城聚会</h2>
             <span class="more"><a target="_blank"  href="/group/my.php?type=4">查看全部</a></span>
         </div>
         <div class="gmc2">
@@ -1899,8 +597,8 @@
         $(this).addClass('on');
         $('.topic_new').hide();
         $('.topic_hot').show();
-        $('#pager_new_article').hide();
-        $('#pager_hot_article_by_reply').show();
+        $('#pager_new_article').show();
+        $('#pager_hot_article_by_reply').hide();
 
     });
     $('.drop_wrap .city').click(function(){
@@ -2010,9 +708,7 @@
 </script>
 <script>
 </script>
-
 <link href="http://css.mafengwo.net/css/mfw-footer.css?1478231953" rel="stylesheet" type="text/css"/>
-
 <div id="footer">
     <div class="ft-content">
         <div class="ft-copyright">
@@ -2027,8 +723,6 @@
         </div>
     </div>
 </div>
-
-
 <link href="http://css.mafengwo.net/css/mfw-toolbar.css?1459131121" rel="stylesheet" type="text/css"/>
 
 <div class="mfw-toolbar" id="_j_mfwtoolbar">
@@ -2062,14 +756,10 @@
         </a>
     </div>
 </div>
-
-
-
 <script language="javascript" type="text/javascript">
     if (typeof M !== "undefined" && typeof M.loadResource === "function") {
         M.loadResource("http://js.mafengwo.net/js/cv/js+AHeaderWo:js+M+module+Storage:js+jquery.jgrowl.min:js+AMessage:js+M+module+dialog+Layer:js+M+module+dialog+DialogBase:js+M+module+dialog+Dialog:js+M+module+FrequencyVerifyControl:js+M+module+FrequencySystemVerify:js+ALogin:js+M+module+ScrollObserver:js+M+module+QRCode:js+AToolbar:js+ACnzzGaLog:js+ARecruit:js+ALazyLoad^YFdR^1469587281.js");
     }
 </script>
-
 </body>
 </html>

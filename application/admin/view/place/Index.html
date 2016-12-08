@@ -1,0 +1,51 @@
+<!-- content start -->
+<div class="admin-content">
+    <div class="am-cf am-padding">
+        <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">地点管理</strong> / <small>Place Management</small></div>
+    </div>
+    <hr />
+    <div class="am-g">
+        <div class="">
+            <form class="am-form" action="advertise/edit" enctype="multipart/form-data" method="post">
+                <table class="am-table am-table-striped table-main">
+                    <thead>
+                        <tr>
+                            <th>省份</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                          <td>
+                              <select name="id" id="pid">
+                                  
+                              </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>包含地名</th>
+                          {foreach $a as $v}
+                          <td>{$v.placename}</td>
+                          {/foreach}
+                        </tr>
+                    </tbody>
+                </table>
+                <hr/>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+  $(function($){
+    //alert($("#pid").val());
+    $.ajax({
+      type:"post",
+      url:"http://www.tpa51.cn/admin/place/sel",
+      async:false,
+      data:"provinceid=1",
+      success:function(data){
+        console.log(data);
+      }
+    })
+  })
+</script>
+<!-- content end -->

@@ -37,7 +37,7 @@ class Auth extends Controller
         }
         $password = $_REQUEST['password'];
         $reuser = $user->selall($username);
-        if($reuser !== $password){
+        if($reuser !== md5($password)){
             echo '密码输入错误';die();
         }
         $viy = $_REQUEST['viy'];
@@ -64,7 +64,6 @@ class Auth extends Controller
 	public function doRegister1()
 	{
         $user = new User();
-<<<<<<< HEAD
         $username = $_REQUEST['username'];
         $reuser = $user->sel1($username);
         $password = $_REQUEST['password'];
@@ -80,47 +79,17 @@ class Auth extends Controller
             echo '密码输入不一致！！！';die();
         }else if(captcha_check($viy)){
             $data['username'] = $username;
-            $data['password'] = $password;
+            $data['password'] = md5($password);
             $data['regtime'] = time();
             $user->inst($data);
             echo 1;die();
         }
         echo '验证码错误';die();
-=======
-        if($_REQUEST['username'] == ''){
-            echo '用户不能为空！！！';die();
-        }
-        $username = $_REQUEST['username'];
-        $password = $_REQUEST['password'];
-        $repassword = $_REQUEST['repassword'];
-        $reuser = $user->sel1($username);
-        if($reuser == $_REQUEST['username']){
-            echo '用户名已存在';die();
-        }
-        if($password !== $repassword){
-            echo '两次密码输入不一致';die();
-        }
-	}
-    public function doRegister()
-    {
-        $user = new User();
-        $data['username'] = $_POST['username'];
-        $data['password'] = $_POST['password'];
-        $data['regtime'] = time();
-        $reuser = $user->inst($data);
-        if($reuser){
-            $this->success('注册成功','http://www.tpa51.cn/index/auth/login');
-//            $this->assign(['title'=>'囧兔会员登录','msg'=>'注册成功','num'=>3]);
-           // $this->assign();
-//            return $this->fetch('login');
-        }
-    }
->>>>>>> e53c359dbc719b11ecfe44c1263bda5326f6d2af
 
 	}
 	public function checkLogin()
 	{
-		return session('uid');
+		return session('username');
 	}
 
 }

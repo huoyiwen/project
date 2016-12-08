@@ -142,7 +142,12 @@ return [
     'view_replace_str'       => [
         '__SITE__' => 'http://www.tpa51.cn',
         // '__STATIC__' => 'http://static.tp5.com/static'
-        '__STATIC__' => 'http://www.tpa51.cn/static'
+        '__STATIC__' => 'http://www.tpa51.cn/static',
+        '__WEBSITE__' => 'http://www.tpa51.cn/index',
+        // '__STATIC__' => 'http://static.tp5.com/static'
+        '__WEBSTATIC__' => 'http://www.tpa51.cn/static'
+
+
     ],
     // 默认跳转页面对应的模板文件
     'dispatch_success_tmpl'  => THINK_PATH . 'tpl' . DS . 'dispatch_jump.tpl',

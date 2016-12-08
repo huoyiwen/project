@@ -1,10 +1,6 @@
 <div id="bacimg" >
     <div id="regr">
-<<<<<<< HEAD
         <div role="form" >
-=======
-        <form role="form" action="http://www.tpa51.cn/index/auth/doregister" method="post">
->>>>>>> e53c359dbc719b11ecfe44c1263bda5326f6d2af
             <div id="div1"></div>
             <div class="form-group">
                 <input type="text" name="username" class="form-control" id="exampleInputEmail1" placeholder="请输入用户名...">
@@ -21,13 +17,9 @@
                 <div id="spanviy"></div>
             </div>
             <button type="submit" class="btn btn-default" id="btn">立即注册</button>
-            <div class="reg1">注册视为同意<b>《蚂蜂窝用户使用协议》</b></div>
-            <div class="reg1">用合作网站账户直接登录</div>
-            <div class="reg2"><a href=""><img src="../../qq.png"></a></div>
-            <div class="reg3">用QQ账号直接登录</div>
+            <div class="reg1">注册视为同意<b>《囧兔用户使用协议》</b></div>
         </div>
     </div>
-<<<<<<< HEAD
 </div>
 <script type="text/javascript"> 
     function rey(){
@@ -40,42 +32,39 @@
     var viy2 = document.getElementsByTagName('input')[3];
     var isname = document.getElementsByTagName('input')[0];
 
-    isname.onblur = regi;
-    viy2.onblur = regi2;
-    isname.onfocus = pwd.onfocus = repwd.onfocus =  viy2.onfocus = regi1;
+    pwd.onfocus = regi;
+    repwd.onfocus = regi2;
+    viy2.onfocus = regi1;
     var timer = null;
     function regi(){
+        $('#div1').html('');
         var username = isname.value;
-        var password = pwd.value;
-        var repassword = repwd.value;
-        $.ajax({
-            type: "POST",
-            url: "http://www.tpa51.cn/index/auth/doregister1",
-            data: "username="+username+"&password="+password+"&repassword="+repassword,
-            success: function(msg){
-                $('#div1').html(msg);
-            }
-        });
+        if (username.length < 6){
+            $('#div1').html('用户名不能少于6位');
+            return false;
+        }
     }
     function regi2(){
+        $('#div1').html('');
         var password = pwd.value;
-        var repassword = repwd.value;
-        var viy = viy2.value;
-        $.ajax({
-            type: "POST",
-            url: "http://www.tpa51.cn/index/auth/doregister2",
-            data: "&password="+password+"&repassword="+repassword+"&viy="+viy,
-            success: function(msg){
-                $('#div1').html(msg);
-            }
-        });
+        if (password.length < 6){
+            $('#div1').html('密码不能少于6位');
+            return false;
+        }
     }
     function regi1()
     {
-        $("#div1").html('');
+        $('#div1').html('');
+        var password = pwd.value;
+        var repassword = repwd.value;
+        if (password !== repassword){
+            $('#div1').html('密码不一致');
+            return false;
+        }
     }
     $('#btn').click(function(){
         //clearInterval(timer);
+        $('#spanviy').html('');
         var username = isname.value;
         var password = pwd.value;
         var repassword = repwd.value;
@@ -86,7 +75,7 @@
             data: "username="+username+"&password="+password+"&repassword="+repassword+"&viy="+viy,
             success: function(msg){
                 if (msg == '1'){
-                    var n = 5;
+                    var n = 3;
                     timer = setInterval(function(){
                         $('#spanviy').html('注册成功 '+n+'秒后跳到登录页面');
                         if (n == 0){
@@ -96,34 +85,9 @@
                     },1100);
 
                 }else{
-                    $('#div1').html(msg);
+                   $('#div1').html(msg);
                 }
             }
         });
     });
 </script>
-=======
-    <script type="text/javascript">
-        window.onload = function ()
-        {
-            var password = document.getElementsByTagName('input')[1];
-            var repassword = document.getElementsByTagName('input')[2];
-            var isname = document.getElementsByTagName('input')[0];
-            isname.onblur = repassword.onblur = regi;
-            function regi() {
-                var username = document.getElementsByTagName('input')[0].value;
-                var password = document.getElementsByTagName('input')[1].value;
-                var repassword = document.getElementsByTagName('input')[2].value;
-                $.ajax({
-                    type: "POST",
-                    url: "http://www.tpa51.cn/index/auth/doregister1",
-                    data: "username="+username+"&password="+password+"&repassword="+repassword,
-                    success: function(msg){
-                        $("#div1").html(msg);
-                    }
-                });
-            }
-        }
-    </script>
-</div>
->>>>>>> e53c359dbc719b11ecfe44c1263bda5326f6d2af

@@ -1,0 +1,62 @@
+<!-- content start -->
+<div class="admin-content">
+    <div class="am-cf am-padding">
+        <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">景点管理</strong> / <small>Scenic Management</small></div>
+    </div>
+    <hr/>
+    <div class="am-g">
+        <div class="">
+            <form class="am-form" action="activity/active" enctype="multipart/form-data" method="post">
+                <table class="am-table am-table-striped table-main">
+                    <thead>
+                        <tr style="align:center;">
+                            <th>活动ID</th>
+                            <th>所属地名</th>
+                            <th>活动标题</th>
+                            <th>活动图片</th>
+                            <th>全套价格</th>
+                            <th>修改时间</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {foreach $activity as $a}
+                        <tr align="center">
+                            <td style="width:60px;">{$a.aid}</td>
+                            <input type="hidden" name="aid" value="{$a.aid}">
+                            <td>
+                                <select name="placeid" id="" style="width:80px;">
+                                {foreach $place as $p}
+                                    {if $p.pid == $a.placeid}
+                                    <option value="{$p.pid}" selected="selected">{$p.placename}</option>
+                                    {else}
+                                    <option value="{$p.pid}">{$p.placename}</option>                             
+                                    {/if}
+                                {/foreach}
+                                </select>
+                            </td>
+                            <td><input type="text" name="a_title" value="{$a.a_title}"></td>
+                            <td><img src="{$a.a_pic}" alt="" style="width:200px;height:200px;"></td>
+                            <td><input type="text" name="a_price" value="{$a.a_price}" size="4px">元</td>
+                            <td>{$a.a_updatetime|date="Y-m-d H:i",###}</td>
+                        </tr>
+                        <tr>
+                            <th>编辑选项</th>
+                            <td>
+                                <input type="file" name="a_pic">
+                                <input type="submit" value="保存修改">
+                            </td>
+                        </tr>
+                        {/foreach}
+                    </tbody>
+                </table>
+            </form>
+                <hr/>
+                <p class="am-fl">共 15 条记录</p>
+                <ol class="am-pagination am-fr">
+                    <li>{$activity->render()}</li>
+                </ol>
+               
+        </div>
+    </div>
+</div>
+<!-- content end -->

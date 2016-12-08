@@ -1,0 +1,49 @@
+
+  <!-- content start -->
+  <div class="admin-content">
+    <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">广告管理</strong> / <small>Advertising Management</small></div>
+    </div>
+
+    <hr/>
+	<div class="am-g">
+        <div class="">
+            <form class="am-form" action="advertise/edit" enctype="multipart/form-data" method="post">
+                <table class="am-table am-table-striped table-main">
+                    <thead>
+                        <tr>
+                            <th>广告ID</th>
+                            <th>广告链接</th>
+                            <th>广告图片</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {foreach $adv as $val}
+                        <tr>
+                            <td>{$val.aid}</td>
+                            <input type="hidden" name="aid" value="{$val.aid}">
+                            <td><input type="text" name="a_link" value="{$val.a_link}" style="width:16em;"></td>
+                            <td><img src="{$val.a_pic}" alt="" style="width:200px;height:200px;"></td>
+                        </tr>
+                        {/foreach}
+                        <tr>
+                            <th>编辑选项</th>
+                            <td>
+                                <input type="file" name="a_pic">
+                                <input type="submit" value="保存修改">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr/>
+                <p class="am-fl">共 2 条记录</p>
+                <ol class="am-pagination am-fr">
+                    <li>{$adv->render()}</li>
+                </ol>
+               
+            </form>
+        </div>
+    </div>
+
+  </div>
+  <!-- content end -->

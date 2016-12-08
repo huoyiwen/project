@@ -11,9 +11,12 @@
 
 return [
 
-    'web_site/' => 'http://www.tpa51.cn/admin/',
+    'web_site' => 'http://www.tpa51.cn/admin/',
     'web_static_site' => 'http://www.tpa51.cn/static/admin/',
-
+    '__STATIC__' => 'http://www.tpa51.cn/static/',
+    define('_STATIC_','http://www.tpa51.cn/static/'),
+    define('STATIC_SITE','http://www.tpa51.cn/static/admin/'),
+    define('WEB_SITE','http://www.tpa51.cn/admin/'),
     // +----------------------------------------------------------------------
     // | 模板设置
     // +----------------------------------------------------------------------

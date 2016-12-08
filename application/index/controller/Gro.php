@@ -23,7 +23,7 @@ class Gro extends Controller
     {
         $glv = new Grou();
         $data = $glv->selectall();
-        $this->assign('title','囧兔酒店大全');
+        $this->assign('title','囧兔论坛');
         $this->assign('data',$data);
         return $this->fetch();
     }

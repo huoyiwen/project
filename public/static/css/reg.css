@@ -1,5 +1,4 @@
 #bacimg{height: 669px;width: 1366px;background: url("../../static/img/20.jpg") no-repeat;}
-<<<<<<< HEAD
 #bacimg #regr #div1{height: 30px;line-height: 30px;color:red;margin-left: 70px;font-size: 14px;margin-top: 20px;opacity:0.8;}
 #regr{background:#F5F5F5;width: 400px;height: 470px;position: absolute;  top:50%;left:50%;margin-left: -200px;margin-top: -230px;border-radius: 7px;}
 #bacimg #regr .form-group{margin-top: 10px;}
@@ -9,14 +8,6 @@
 #bacimg #regr .form-group #spanviy{color: red;font-size: 15px;margin-left: 70px;}
 #bacimg #regr button{height: 40px;width: 260px;margin-left: 70px;font-size: 16px;font-weight: bold;background: #FFA800;line-height: 30px;
     color: #fff;opacity:1;margin-top: px;}
-=======
-#bacimg #regr #div1{height: 30px;line-height: 30px;color:red;margin-left: 70px;font-size: 14px;margin-top: 20px;}
-#regr{background:#F5F5F5;width: 400px;height: 380px;position: absolute;  top:50%;left:50%;margin-left: -200px;margin-top: -150px;border-radius: 7px;}
-#bacimg #regr .form-group{margin-top: 10px;}
-#bacimg #regr .form-group #exampleInputEmail1{height: 30px;width: 260px;margin-left: 70px;}
-#bacimg #regr button{height: 40px;width: 260px;margin-left: 70px;font-size: 16px;font-weight: bold;background: #FFA800;line-height: 30px;
-    color: #fff;}
->>>>>>> e53c359dbc719b11ecfe44c1263bda5326f6d2af
 #bacimg #regr .reg1{margin-left: 70px;font-size: 13px;margin-top: 15px;}
 #bacimg #regr .reg2{margin-left: 180px;font-size: 13px;margin-top: 12px;border-radius:21px;}
 #bacimg #regr .reg2 img{border-radius:21px;}
